@@ -1,0 +1,276 @@
+@font-face {
+    font-family: benmono;
+    src: url(../fonts/benmono/BenmonoLiane-0W0or.ttf);
+    src: url(../fonts/benmono/BenmonoLiane-0W0or.otf);
+}
+
+body {
+    background-color: rgb(253, 245, 245);
+    overflow-x: hidden;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+/* Loader */
+.loader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    z-index: 2000;
+    overflow-y: hidden;
+}
+
+.disppear{
+    animation: vanish 1s forwards;
+}
+
+@keyframes vanish {
+    100%{
+        opacity: 1;
+        visibility: hidden;
+    }
+}
+/*Arriere plan*/
+/* .bg-green {
+    background-color: #047b3a !important;
+} */
+
+.bg-green {
+    background-color: #C6E6D4 !important;
+}
+/*Texte*/
+.text-color-green {
+    color: #29b766;
+}
+
+/* Button */
+
+.btn-green {
+    font-size: 18px;
+    color: #bbf5d4;
+    background-color: #29b766;
+    border-color: #29b766;
+}
+
+.btn-green:hover {
+    color: #fff;
+    background-color: #29f56dcb;
+    border-color: #29f56d;
+}
+
+/*Lien*/
+
+nav .link-green{
+    font-weight: 700 !important;
+}
+
+.link-green {
+    color: #29b766;
+  }
+  
+  .link-green:hover, .link-green:focus {
+    color: #51d07c;
+  }
+
+/*Logo ZOE*/
+.logo-zoe{
+    height: 62px;
+    width: 100px;
+}
+
+/*Slider*/
+.slide-img .slide-img-box{
+height: 375px;
+width: auto;
+}
+
+.slide-img .slide-img-box::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(225deg,#0f0f0f,#000000);
+    z-index: 1;
+    mix-blend-mode: screen;
+}
+
+.slide-img .slide-img-box img{
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-text{
+    font-size: 42px;
+    color: #FF6702 !important;
+}
+
+.carousel-text-description{
+    font-size: 20px;
+}
+.carousel-text-green{
+    color: #C6E6D4 !important;
+}
+
+.carousel-text-black{
+    color: #111 !important;
+}
+
+/* .slider-zoe-caption {
+    position: absolute;
+    right: 15%;
+    bottom: 1.25rem;
+    left: 15%;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    color: #fff;
+    text-align: center;
+} */
+
+
+/* Card */
+.card img{
+    width: 354px;
+    height: 212px;
+}
+
+/* Formulaire reservation index */
+.form-reservation{
+    margin: 20px 0;
+    padding: 30px;
+    background-color: #C6E6D4 !important;
+    border-radius: 10px;
+}
+
+.title-reservation{
+    font-size: 28px;
+    letter-spacing: 4px;
+}
+
+.form-group{
+    margin-bottom: 15px;
+}
+
+.form-group label{
+    color: rgba(88, 88, 88, 0.808);
+    margin-bottom: 5px;
+}
+
+
+/* Decouverte */
+.title-dec{
+    font-size: 36px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.title-decouverte{
+    font-size: 28px;
+}
+
+.title-decouverte span{
+    letter-spacing: 2px;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.description-decouverte{
+    font-size: 20px;
+    color: rgb(104, 90, 90);
+}
+
+.img-decouverte{
+    max-width: 450px;
+    width: 100%;
+    border-radius: 15px;
+}
+
+
+
+.popular-destination .box{
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 290px;
+}
+
+.popular-destination .box img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.box .content{
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    text-align: center;
+    align-items: center;
+    opacity: .8;
+    transform: translateX(100%);
+    transition: 0.5s;
+}
+
+.box:hover .content{
+    transform: translateX(0);
+}
+
+.box .content h4 {
+    font-size: 25px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.box .content p{
+    padding: 2px;
+    font-size: 16px;
+}
+
+/* Agence */
+.agence{
+    padding: 5px;
+    background: #fff;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.agence .agence-title{
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    text-align: center;
+    border-bottom: 2px solid #29b766;
+    margin-bottom: 5px;
+    padding: 5px;
+}
+
+.agence .agence-contact{
+    margin-top: 15px;
+
+}
+
+.agence .agence-contact p{
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.agence .agence-contact p span{
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}

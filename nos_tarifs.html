@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./vendors/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./vendors/font-awesome/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./img/fav-icon.png" type="image/x-icon">
+    <title>ZOE | Transport et logistique</title>
+</head>
+
+<body>
+    <div class="loader">
+        <img src="./img/loader.gif" alt="loader-gif">
+      </div>
+    <!-- Menu de navigation -->
+    <nav class="navbar navbar-expand-md sticky-top navbar-dark bg-green">
+        <div class="container-fluid">
+            <div class="logo">
+                <img class="logo-zoe" src="./img/logo.png">
+            </div>
+            <button class="navbar-toggler nav-dob-link" type="button" data-bs-toggle="collapse"
+                data-bs-target="#toggleNavbar" aria-controls="toggleNavbar" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="fa fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse justify-content-md-center" id="toggleNavbar">
+                <a class="link-green fs-5 me-5 d-flex my-3" href="index.html">Accueil</a>
+                <a class="link-green fs-5 me-5 d-flex my-3" href="nos_tarifs.html">Nos tarifs</a>
+                <a class="link-green fs-5 me-5 d-flex my-3" href="about.html">A propos</a>
+                <a class="link-green fs-5 d-flex my-3" href="contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+    <!-- /Menu de navigation -->
+    <!-- breadcrumbs -->
+    <div class="container py-3">
+        <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);"
+            aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html" class="link-green">Accueil</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Nos tarifs</li>
+            </ol>
+        </nav>
+    </div>
+    <!-- ./breadcrumbs -->
+    <!-- Carte nos tarifs -->
+    <div class="container">
+        <div>
+            <h2>Quoi de mieux que de voyager ?</h2>
+            <p>Découvrez nos tarifs avec des prix abordables et passez de beaux moment</p>
+        </div>
+        <div class="d-flex justify-content-center">
+            <form action="" class="row">
+                <div class="col-md-7">
+                    <label for="search" class="visually-hidden">Ville de départ</label>
+                    <select name="ville" id="search" class="form-control">
+                        <option value="1" selected>Brazzaville</option>
+                        <option value="2">Pointe-noire</option>
+                        <option value="3">Dolisie</option>
+                        <option value="4">Oyo</option>
+                        <option value="5">Kinkala</option>
+                        <option value="6">Bouenza</option>
+                    </select>
+                </div>
+                <div class="col-md-5">
+                    <button type="submit" class="btn btn-green mb-3">Soumettre</button>
+                </div>
+            </form>
+        </div>
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <div class="card" >
+                    <img src="./img/destination/brazzaville.jpg" class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold">Brazzaville</h5>
+                        <p class="card-text">Prix : <span> 15 000 fcfa</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card" >
+                    <img src="./img/destination/pointe_noire.jpg" class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold">Pointe-noire</h5>
+                        <p class="card-text">Prix : <span> 15 000 fcfa</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card" >
+                    <img src="./img/destination/dolisie.jpg" class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold">Dolisie</h5>
+                        <p class="card-text">Prix : <span> 15 000 fcfa</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card" >
+                    <img src="./img/destination/oyo.jpg" class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold">Oyo</h5>
+                        <p class="card-text">Prix : <span> 15 000 fcfa</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card" >
+                    <img src="./img/destination/kinkala.jpg" class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold">Kinkala</h5>
+                        <p class="card-text">Prix : <span> 15 000 fcfa</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card" >
+                    <img src="./img/destination/bouenza.webp" class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold">Bouenza</h5>
+                        <p class="card-text">Prix : <span> 15 000 fcfa</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Carte nos tarifs -->
+
+    <!-- footer -->
+    <!-- <div class="container-fluid mt-4 bg-green">
+        <footer class="py-5 container">
+            <div class="row">
+                <div class="col md-4">
+
+                </div>
+                <div class="col md-4">
+                    <h3>Menu</h3>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2">
+                            <a href="./index.html" class="nav-dob-item link-green p-0">Accueil</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="./nos_tarifs.html" class="nav-dob-item link-green p-0">Nos tarifs</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="./about.html" class="nav-dob-item link-green p-0">A propos</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="./contact.html" class="nav-dob-item link-green p-0">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col md-4">
+
+                </div>
+            </div>
+        </footer>
+    </div> -->
+    <!-- /footer -->
+    <script src="./vendors/jquery/jquery-3.6.1.min.js"></script>
+    <script src="./vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
