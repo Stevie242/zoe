@@ -24,7 +24,6 @@ a{
     text-decoration: none;
 }
 
-
 /* Loader */
 .loader{
     position: fixed;
@@ -307,6 +306,125 @@ a{
     border-radius: 50px;
     border: 2px solid rgb(66, 153, 15);
     color: rgb(66, 153, 15);
+}
+
+/* Modal details voyage */
+.details-voyage img{
+    width: 100%;
+    height:100%;
+}
+
+
+
+.details-voyage span{
+    color: rgb(91, 211, 22);
+}
+
+/* Modal login */
+
+.login .form-group label{
+    display: none;
+}
+
+.login .form-group input{
+    border: 2px solid rgb(241, 96, 38);
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    border-radius: 5px;
+    outline: none;
+}
+
+.login form .forgot{
+    text-align: right;
+}
+
+.login form .forgot a{
+    color: #221414;
+}
+
+.login form .forgot a:hover{
+    color: rgb(91, 211, 22);
+}
+
+
+.login .form-submit{
+    display: flex;
+    justify-content: center;
+}
+
+.login .form-submit button{
+    display: inline-block;
+    width: 200px;
+    height: 50px;
+    border: none;
+    background-color: rgb(241, 96, 38);
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+.login .form-submit button:hover{
+    background-color: rgb(207, 64, 7);
+}
+
+.login .form-submit button i{
+    margin-left: 5px;
+}
+
+
+/* Modal login */
+
+.register .form-group label{
+    display: none;
+}
+
+.register .form-group input{
+    border: 2px solid rgb(241, 96, 38);
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    border-radius: 5px;
+    outline: none;
+}
+
+.register form .forgot{
+    text-align: right;
+}
+
+.register form .forgot a{
+    color: #221414;
+}
+
+.register form .forgot a:hover{
+    color: rgb(91, 211, 22);
+}
+
+
+.register .form-submit{
+    display: flex;
+    justify-content: center;
+}
+
+.register .form-submit button{
+    display: inline-block;
+    width: 200px;
+    height: 50px;
+    border: none;
+    background-color: rgb(241, 96, 38);
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+.register .form-submit button:hover{
+    background-color: rgb(207, 64, 7);
+}
+
+.register .form-submit button i{
+    margin-left: 5px;
 }
 
 
