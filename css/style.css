@@ -216,6 +216,99 @@ a{
     font-size: 14px;
 }
 
+/* grille tarifaire */
+.main{
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.main .description{
+    text-align: center;
+    font-size: 28px;
+    color: rgb(241, 96, 38);
+}
+
+.main .price{
+    margin-top: 20px;
+}
+
+.main .price .form form{
+    display: flex;
+    justify-content: center;
+}
+
+
+.main .price .form form .form-group select{
+    display: inline-block;
+    text-align: center;
+    background-color: #fff;
+    border: 3px solid rgb(241, 96, 38);
+    width: 240px;
+    height: 50px;
+    padding: 10px;
+    border-radius: 0;
+    outline: none;
+    resize: none;
+}
+
+.main .price .form form .form-submit button{
+    display: inline-block;
+    width: 120px;
+    height: 50px;
+    border: none;
+    background-color: rgb(241, 96, 38);
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.main .price .form form .form-submit button:hover{
+    background-color: rgb(207, 64, 7);
+}
+
+@media (min-width: 576px){
+    .main .price .form form .form-group select{
+        width: 350px;
+    }
+    .main .price .form form .form-submit button{
+        width: 200px;
+    }
+}
+
+.main .price .grid-price{
+    margin-top: 20px;
+}
+
+.main .price .grid-price .title-price{
+    margin: 10px auto;
+    text-align: center;
+    font-size: 22px;
+}
+
+.main .price .grid-price .city-dest{
+    margin: 10px auto;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.main .price .grid-price .city-dest img{
+    width: 100%;
+    height: 250px;
+    margin-bottom: 20px;
+}
+
+.main .price .grid-price .city-dest h4 a{
+    color: rgb(91, 211, 22);
+}
+
+.main .price .grid-price .city-dest h4 a:hover{
+    padding: 0 10px;
+    border-radius: 50px;
+    border: 2px solid rgb(66, 153, 15);
+    color: rgb(66, 153, 15);
+}
+
 
 /* Contact */
 .contact .title{
