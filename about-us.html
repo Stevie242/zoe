@@ -19,7 +19,7 @@
     <img src="./img/loader.gif" alt="loader-gif">
   </div> -->
   <!-- /Loader -->
-  <div class="main">
+  <main>
     <!-- Menu de navigation -->
     <header class="header">
       <nav class="navbar navbar-expand-lg menu">
@@ -30,22 +30,121 @@
             <span class="fa-solid fa-bars"></span>
           </button>
           <div class="collapse navbar-collapse d-lg-flex justify-content-end" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-list">
-                <a class="nav-link-zoe" href="index.html">Accueil</a>
-              </li>
-              <li class="nav-list">
-                <a class="nav-link-zoe active" aria-current="page" href="about-us.html">Qui sommes-nous</a>
-              </li>
-              <li class="nav-list">
-                <a class="nav-link-zoe" href="contact.html">Contact</a>
-              </li>
-            </ul>
+            <div class="row w-75">
+              <div class="col-md-8">
+                <ul class="navbar-nav">
+                  <li class="nav-list">
+                    <a class="nav-link-zoe" href="index.html">Accueil</a>
+                  </li>
+                  <li class="nav-list">
+                    <a class="nav-link-zoe active" aria-current="page" href="about-us.html">Qui sommes-nous</a>
+                  </li>
+                  <li class="nav-list">
+                    <a class="nav-link-zoe" href="contact.html">Contact</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-4">
+                <ul class="navbar-nav justify-content-end">
+                  <li class="nav-list">
+                    <a class="nav-link-zoe" href="javascript:void(0);" data-bs-toggle="modal"
+                      data-bs-target="#login">Connexion</a>
+                  </li>
+                  <li class="nav-list">
+                    <a class="nav-link-zoe" href="javascript:void(0);" data-bs-toggle="modal"
+                      data-bs-target="#register">S'inscrire</a>
+                  </li>
+                  <!-- <li class="nav-list">
+                    <a class="nav-link-zoe" href="#">Tableau de bord</a>
+                  </li> -->
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </nav>
     </header>
     <!-- /Menu de navigation -->
+
+
+    <!-- Modal Login -->
+    <div class="modal fade" id="login" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">S'identifier</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="login">
+              <form action="">
+                <div class="form-group">
+                  <label for="fullname">Nom d'utilisateur</label>
+                  <input type="text" name="fullname" id="fullname" placeholder="Nom d'utilisateur">
+                </div>
+                <div class="form-group">
+                  <label for="fullname">Mot de passe</label>
+                  <input type="password" name="fullname" id="fullname" placeholder="Mot de passe">
+                </div>
+                <div class="forgot">
+                  <a href="">Mot de passe oublié ?</a>
+                </div>
+                <div class="form-submit">
+                  <button>Se connecter <i class="fa-solid fa-right-to-bracket"></i></button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /Modal Login -->
+
+    <!-- Modal Register -->
+    <div class="modal fade" id="register" tabindex="-1" aria-labelledby="registrModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">S'enregister</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="login">
+              <form action="">
+                <div class="form-group">
+                  <label for="lastname">Nom</label>
+                  <input type="text" name="lastname" id="lastname" placeholder="Nom">
+                </div>
+                <div class="form-group">
+                  <label for="firstname">Prénom</label>
+                  <input type="text" name="firstname" id="firstname" placeholder="Prénom">
+                </div>
+                <div class="form-group">
+                  <label for="firstname">Email</label>
+                  <input type="email" name="email" id="email" placeholder="Email">
+                </div>
+                <div class="form-group">
+                  <label for="pwd">Mot de passe</label>
+                  <input type="password" name="pwd" id="pwd" placeholder="Mot de passe">
+                </div>
+                <div class="form-group">
+                  <label for="conf-pwd">Confirmez mot de passe</label>
+                  <input type="password" name="conf-pwd" id="conf-pwd" placeholder="Confirmez mot de passe">
+                </div>
+                <div class="form-group-check">
+                  <input type="checkbox" name="user-cond" id="user-cond">
+                  <label for="user-cond">J'accepte <a href="javascrip:void(0);">les conditions d'utilisation</a></label>
+                </div>
+                <div class="form-submit">
+                  <button>S'inscire</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /Modal Register -->
 
     <!-- Footer -->
     <footer class="menu mt-4 px-3 pt-5 pb-3">
@@ -59,7 +158,7 @@
               ZOE T & L est agence de voyage basé sur le Transport routier.
             </div>
           </div>
-          <div class="col-sm-12 col-md-6 col-lg-3">
+          <div class="col-sm-12 col-md-6 col-lg-4">
             <div class="footer-title">
               ZOE T & L
             </div>
@@ -77,23 +176,22 @@
               </ul>
             </div>
           </div>
-          <div class="col-sm-12 col-md-12 col-lg-5">
+          <div class="col-sm-12 col-md-12 col-lg-4">
             <div class="footer-title">
-              Newsletter
+              Nos zone de servies
             </div>
             <div class="footer-description">
-              Abonnez-vous a notre newsletter pour être informer de nos nouveautés.
-            </div>
-            <div class="footer-form">
-              <form action="">
-                <div class="form-group">
-                  <label for="mail">Email</label>
-                  <input type="email" name="mail" id="mail" placeholder="Veuillez saisir votre email">
-                </div>
-                <div class="footer-submit">
-                  <button type="submit">Souscrire !</button>
-                </div>
-              </form>
+              <ul class="navbar-nav">
+                <li class="footer-list">
+                  Pointe-Noire
+                </li>
+                <li class="footer-list">
+                  Brazzaville
+                </li>
+                <li class="footer-list">
+                  Ouesso
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -103,7 +201,7 @@
       </div>
     </footer>
     <!-- /Footer -->
-  </div>
+  </main>
   <script src="./vendors/jquery/jquery-3.6.1.min.js"></script>
   <script src="./vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="./js/main.js"></script>

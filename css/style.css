@@ -88,7 +88,7 @@ a{
     justify-content: center;
     align-items: center;
     height: 400px;
-    background-image: url('../img/slider/bus_2.jpg');
+    /* background-image: url('../img/slider/bus_2.jpg'); */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -374,7 +374,7 @@ a{
 }
 
 
-/* Modal login */
+/* Modal register */
 
 .register .form-group label{
     display: none;
@@ -427,6 +427,66 @@ a{
     margin-left: 5px;
 }
 
+
+/* Modal reserved */
+
+.ticket .form-group{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ticket .form-group label{
+    margin-bottom: 10px;
+}
+
+.ticket .form-group select,
+.ticket .form-group input{
+    background-color: #fff;
+    border: 2px solid rgb(241, 96, 38);
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    border-radius: 5px;
+    outline: none;
+}
+
+.ticket form .forgot{
+    text-align: right;
+}
+
+.ticket form .forgot a{
+    color: #221414;
+}
+
+.ticket form .forgot a:hover{
+    color: rgb(91, 211, 22);
+}
+
+
+.ticket .form-submit{
+    display: flex;
+    justify-content: center;
+}
+
+.ticket .form-submit button{
+    display: inline-block;
+    width: 200px;
+    height: 50px;
+    border: none;
+    background-color: rgb(241, 96, 38);
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+.ticket .form-submit button:hover{
+    background-color: rgb(207, 64, 7);
+}
+
+.ticket .form-submit button i{
+    margin-left: 5px;
+}
 
 /* Contact */
 .contact .title{

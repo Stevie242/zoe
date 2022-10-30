@@ -45,7 +45,7 @@
                 </ul>
               </div>
               <div class="col-md-4">
-                <ul class="navbar-nav">
+                <ul class="navbar-nav justify-content-end">
                   <li class="nav-list">
                     <a class="nav-link-zoe" href="javascript:void(0);" data-bs-toggle="modal"
                       data-bs-target="#login">Connexion</a>
@@ -67,14 +67,14 @@
     <!-- /Menu de navigation -->
 
     <!-- Banniere -->
-    <div class="banniere">
+    <div class="banniere" data-setbg="img/slider/bus_2.jpg">
       <div class="content">
         <div class="title">
           Passez de moment bon moment avec <span class="title-zoe">ZOE</span>
         </div>
         <div class="reservation">
           <a href="javascript:void(0);" class="reservation-link" data-bs-toggle="modal"
-            data-bs-target="#register">Réserver maintenant</a>
+            data-bs-target="#reserved">Réserver maintenant</a>
         </div>
       </div>
     </div>
@@ -283,7 +283,7 @@
     <!-- /Modal Login -->
 
     <!-- Modal Register -->
-    <div class="modal fade" id="register" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal fade" id="register" tabindex="-1" aria-labelledby="registrModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -293,7 +293,6 @@
           <div class="modal-body">
             <div class="login">
               <form action="">
-
                 <div class="form-group">
                   <label for="lastname">Nom</label>
                   <input type="text" name="lastname" id="lastname" placeholder="Nom">
@@ -312,7 +311,7 @@
                 </div>
                 <div class="form-group">
                   <label for="conf-pwd">Confirmez mot de passe</label>
-                  <input type="password" name="conf-pwd" id="conf-pwd" placeholder="Mot de passe">
+                  <input type="password" name="conf-pwd" id="conf-pwd" placeholder="Confirmez mot de passe">
                 </div>
                 <div class="form-group-check">
                   <input type="checkbox" name="user-cond" id="user-cond">
@@ -330,7 +329,89 @@
     <!-- /Modal Register -->
 
     <!-- Modal Reserved -->
-
+    <div class="modal fade" id="reserved" tabindex="-1" aria-labelledby="reservedModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Reservation</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="ticket">
+              <form action="">
+                <div class="form-group">
+                  <label for="fullname">Nom complet</label>
+                  <input type="text" name="fullname" id="fullname" placeholder="Nom d'utilisateur">
+                </div>
+                <div class="form-group">
+                  <label for="date-start">Date de départ</label>
+                  <input type="date" name="date-start" id="date-start">
+                </div>
+                <div class="form-group">
+                  <label for="city-start">Ville de départ</label>
+                  <select name="city-start" id="city-start">
+                    <option value="">--- Sélectionnez ville de départ---</option>
+                    <optgroup label="Zone Sud">
+                      <option value="">Pointe-Noire</option>
+                    </optgroup>
+                    <optgroup label="Zone Nord">
+                      <option value="">Brazzaville</option>
+                    </optgroup>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="station-start">Gare de départ</label>
+                  <select name="station-start" id="station-start">
+                    <option value="">--- Gare de départ---</option>
+                    <option value="">Ngoyo</option>
+                    <option value="">Tie-Tie</option>
+                    <option value="">O.C.H</option>
+                    <option value="">Siafoumou</option>
+                    <option value="">Plateau</option>
+                    <option value="">Mfilou</option>
+                    <option value="">Mikalou</option>
+                    <option value="">Ouenze</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="city-end">Ville d'arrivée</label>
+                  <select name="city-end" id="city-end">
+                    <option value="">--- Sélectionnez ville d'arrivée'---</option>
+                    <optgroup label="Zone Sud">
+                      <option value="">Pointe-Noire</option>
+                    </optgroup>
+                    <optgroup label="Zone Nord">
+                      <option value="">Brazzaville</option>
+                    </optgroup>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="station-end">Gare d'arrivée</label>
+                  <select name="station-end" id="station-end">
+                    <option value="">--- Gare d'arrivée---</option>
+                    <option value="">Ngoyo</option>
+                    <option value="">Tie-Tie</option>
+                    <option value="">O.C.H</option>
+                    <option value="">Siafoumou</option>
+                    <option value="">Plateau</option>
+                    <option value="">Mfilou</option>
+                    <option value="">Mikalou</option>
+                    <option value="">Ouenze</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="nbr-passenger">Nombre passager</label>
+                  <input type="number" name="nbr-passenger" id="nbr-passenger" min="1" value="1">
+                </div>
+                <div class="form-submit">
+                  <button>Réserver</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- /Modal Reserved -->
 
     <!-- Footer -->
