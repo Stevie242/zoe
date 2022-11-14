@@ -1,6 +1,6 @@
 @font-face {
-    font-family: kanit;
-    src: url(../fonts/kanit/Kanit-Regular.ttf);
+    font-family: poppins;
+    src: url(../fonts/Poppins-Regular.ttf);
 }
 
 @font-face{
@@ -12,7 +12,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: kanit;
+    font-family: poppins;
 }
 
 body {
@@ -64,6 +64,10 @@ a{
     color: rgb(126, 245, 58);
 }
 
+.w-80{
+    width: 80% !important;
+}
+
 .nav-list{
     margin-right: 30px;
     margin-top: 10px;
@@ -72,7 +76,7 @@ a{
 
 .nav-list .nav-link-zoe{
     color: #111;
-    font-size: 22px;
+    font-size: 18px;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
 }
 
@@ -83,23 +87,30 @@ a{
 
 
 /* Banniere */
+
+img.set-bg{
+    width: 100%;
+    height: 450px;
+    /* background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; */
+    /* background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('../img/slider/bus.jpg') no-repeat center center /cover; */
+
+
+}
+
 .banniere{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 400px;
+    height: 150px;
     /* background-image: url('../img/slider/bus_2.jpg'); */
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: center; */
     overflow-y: hidden;
 }
 
-.banniere .content .title{
-    font-size: 36px;
-    font-weight: 600;
-    color: #fff;
-}
 
 .banniere .content .title .title-zoe{
     color: rgb(126, 245, 58);
@@ -112,18 +123,20 @@ a{
     justify-content: center;
 }
 
-.banniere .content .reservation .reservation-link{
+.banniere .content .reservation .title{
     margin-top: 20px;
     line-height: 1.5;
+    font-size: 36px;
+    font-weight: 600;
     letter-spacing: 2px;
     color: #fff;
     text-decoration: none;
+    text-align: center;
     cursor: pointer;
     user-select: none;
     border: none;
     border-radius: 5px;
     padding: 10px;
-    background-color: rgb(241, 96, 38);
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
     transform: translateY(400%);
     animation: fade-up 2.5s forwards;
@@ -131,7 +144,7 @@ a{
 
 @keyframes fade-up {
     100%{
-        transform: translateY(50%);
+        transform: translateY(0);
     }
 }
 
@@ -217,10 +230,10 @@ a{
 
 /* grille tarifaire */
 .main{
-    margin-top: 30px;
+    margin-top: 20px;
     margin-bottom: 20px;
 }
-.main .description{
+.main .title{
     text-align: center;
     font-size: 28px;
     color: rgb(241, 96, 38);
@@ -556,4 +569,87 @@ a{
 
 .address .min-desc{
     font-size: 16px;
+}
+
+/* About-us home */
+
+.about-us{
+    margin-top: 30px;
+}
+
+.about-us .title{
+    text-align: center;
+    font-size: 28px;
+    color: rgb(241, 96, 38);
+}
+
+.about-us .description{
+    text-align: center;
+    margin-top: 15px;
+}
+
+
+/* FAQs */
+.faqs{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.faqs .title{
+    text-align: center;
+    font-size: 28px;
+    color: rgb(241, 96, 38);
+}
+
+.faqs .img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.faqs .img img{
+    width: 300px;
+    height: 300px;
+}
+
+/* Banns */
+
+.about-us .title,
+.main .title,
+.faqs .title{
+    padding: 15px 30px;
+    background-color: #fff;
+}
+
+
+
+/* Modif */
+.accordion-button-zoe:not(.collapsed) {
+    color: rgb(241, 96, 38) !important;
+    background-color: rgba(247, 162, 128, 0.411) !important;
+    box-shadow: inset 0 -1px 0 rgba(0,0,0,.125);
+}
+
+.accordion-button:focus{
+    border-color: rgb(241, 96, 38) !important;
+    box-shadow: 0 0 0 .25rem rgba(241, 96, 38, 0.438);
+}
+
+/* Button */
+.btn-zoe-link{
+    padding: 10px 20px;
+    background-color: rgb(241, 96, 38);
+    border-radius: 10px;
+    color: #fff;
+    font-weight: 500;
+}
+
+.btn-zoe-link:hover{
+    padding: 10px 20px;
+    background-color: rgb(163, 60, 19);
+    border-radius: 10px;
+    color: #fff;
+    font-weight: 500;
 }
