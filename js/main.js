@@ -41,11 +41,7 @@ $(document).ready(function(){
         $button.parent().find('input').val(newVal);
     });*/
 
-    $('#user-dash').hide();
-
-    $('#user-dash').show(3000);
-
-    $('#example').DataTable({
+    $('#user-historique').DataTable({
         "bFilter": false,
     });
 
