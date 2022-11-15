@@ -40,4 +40,10 @@ $(document).ready(function(){
         }
         $button.parent().find('input').val(newVal);
     });*/
+
+    $(document).ready(function () {
+        $('#example').DataTable({
+			"bFilter": false,
+		});
+    });
 })
