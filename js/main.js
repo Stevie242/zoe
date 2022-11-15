@@ -41,9 +41,12 @@ $(document).ready(function(){
         $button.parent().find('input').val(newVal);
     });*/
 
-    $(document).ready(function () {
-        $('#example').DataTable({
-			"bFilter": false,
-		});
+    $('#user-dash').hide();
+
+    $('#user-dash').show(3000);
+
+    $('#example').DataTable({
+        "bFilter": false,
     });
+
 })
