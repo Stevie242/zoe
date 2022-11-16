@@ -1,0 +1,363 @@
+@font-face {
+    font-family: poppins;
+    src: url(../fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: bebas;
+    src: url(../fonts/bebasNeue/BebasNeue-Regular.ttf);
+}
+
+:root{
+    --orange-zoe:rgb(241, 96, 38);
+    --orange-zoe-reverse:rgb(163, 60, 19);
+    --green-zoe: rgb(126, 245, 58);
+    --green-zoe-reverse: rgb(91, 211, 22);
+    --text-color: rgb(134,141,151);
+    --text-i-color: #f3f4f6;
+    --text-h-color: #444a53;
+    --text-span-color: #828997;
+    --bg-list-color: #253047;
+    --bg-card-color: chartreuse;
+    --border-color: #594ef7;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins';
+}
+
+body{
+    width: 100%;
+    background: #e5e7eb;
+    position: relative;
+    display: flex;
+}
+
+/* Sidebar start */
+
+#menu{
+    background: #111827;
+    width: 300px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#menu .logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    /* padding-top: 20px; */
+}
+
+#menu .logo img{
+    width: 90px;
+}
+
+#menu .items{
+    margin-top: 0px;
+}
+
+#menu .items li{
+    list-style: none;
+    padding: 15px 0;
+    transition: 0.3s ease;
+}
+
+#menu .items li:hover{
+    background: var(--bg-list-color);
+    cursor: pointer;
+}
+
+#menu .items li:nth-child(1){
+    border-left: 4px solid #fff;
+}
+
+#menu .items li i{
+    color: var(--text-color);
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size:14px;
+    margin: 0 10px 0 25px;
+}
+
+#menu .items li:hover i,
+#menu .items li:hover i{
+    color: var(--text-i-color); 
+}
+
+#menu .items li a{
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 300;
+    transition: 0.3s ease;
+}
+
+/* sidebar end */
+
+#interface{
+    width: calc(100% - 300px);
+    position: relative;
+    margin-left: 300px;
+    overflow: hidden;
+}
+
+#interface .navigation{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    padding: 15px 30px;
+    border-bottom: 3px solid var(--border-color);
+    position: fixed;
+    width: calc(100% - 300px);
+}
+
+/* #interface .navigation .title{
+
+} */
+
+#interface .navigation .profile{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#interface .navigation .profile img{
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+#interface .navigation .n1{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#interface .navigation .n1 #menu-btn{
+    display: none;
+    margin-right: 20px;
+    color: #2B2B2B;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+#interface .i-name{
+    margin-top: 70px;
+    color: var(--text-h-color);
+    padding: 30px 30px 0 30px;
+    font-size: 24px;
+    font-weight: 700;
+    
+}
+
+.cards{
+    padding: 30px 30px 0 30px;
+}
+
+.cards .carte{
+    background-color: #fff;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 16px 20px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.cards .carte i{
+    font-size: 25px;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    color: #fff;
+    background: var(--bg-card-color);
+    margin-right: 15px;
+}
+
+.cards .carte h3{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.cards .carte span{
+    font-size: 15px;
+    color: var(--text-span-color);
+}
+
+.historique {
+    margin-bottom: 20px;
+}
+
+.historique .table-responsive{
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+@media (max-width:768px) {
+    #menu{
+        width: 270px;
+        position: fixed;
+        left: -270px;
+        transition: 0.3s ease;
+    }
+
+    #menu.active{
+        left: 0px;
+    }
+
+    #interface .navigation .n1 #menu-btn{
+        display: initial;
+    }
+
+    #interface{
+        width: 100%;
+        margin-left: 0px;
+        display: inline-block;
+        transition: 0.3s ease;
+    }
+
+    #menu.active ~ #interface{
+        width: calc(100% - 270px);
+        margin-left: 270px;
+        transition: 0.3s ease;
+    }
+
+    #menu.active ~ #interface .cards{
+        padding: 5px;
+    }
+    #menu.active ~ #interface .cards .carte{
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #interface .navigation{
+        width: 100%;
+    }
+}
+
+
+@media (max-width:447px) {
+    #interface .navigation{
+        padding: 15px;
+    }
+}
+
+/*-----------------
+	2. Table
+-----------------------*/
+
+.table-responsive {
+    white-space: nowrap;
+    width: 100%;
+}
+
+.table {
+    color: #333;
+}
+
+.table.table-white {
+    background-color: #fff;
+}
+
+.table thead th {
+    font-weight: 500;
+    letter-spacing: 0.05em;
+}
+
+.table-striped>tbody>tr:nth-of-type(2n+1) {
+    background-color: #f6f6f6;
+}
+
+table.table td h2 {
+    display: inline-block;
+    font-size: inherit;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+}
+
+table.table td h2.table-avatar {
+    align-items: center;
+    display: inline-flex;
+    font-size: inherit;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+table.table td h2.table-avatar.blue-link a {
+    color: #007bff;
+}
+
+table.table td h2 a {
+    color: #333;
+}
+
+table.table td h2 a:hover {
+    color: #f43b48;
+}
+
+table.table td h2 span {
+    color: #888;
+    display: block;
+    font-size: 12px;
+    margin-top: 3px;
+}
+
+table.dataTable {
+    margin-bottom: 15px !important;
+    margin-top: 15px !important;
+}
+
+.table-nowrap td,
+.table-nowrap th {
+    white-space: nowrap
+}
+
+.table-hover tbody tr:hover {
+    background-color: #f7f7f7;
+    color: #212529;
+}
+
+table.dataTable thead>tr>th.sorting_asc,
+table.dataTable thead>tr>th.sorting_desc,
+table.dataTable thead>tr>th.sorting,
+table.dataTable thead>tr>td.sorting_asc,
+table.dataTable thead>tr>td.sorting_desc,
+table.dataTable thead>tr>td.sorting {
+    padding-right: 30px !important;
+}
+
+.table.custom-table>tbody>tr>td,
+.table.custom-table>tbody>tr>th,
+.table.custom-table>tfoot>tr>td,
+.table.custom-table>tfoot>tr>th,
+.table.custom-table>thead>tr>td,
+.table.custom-table>thead>tr>th {
+    padding: 10px 20px !important;
+}
+
+.page-item.active .page-link {
+    background-color: rgb(241, 96, 38);
+    border-color: rgb(241, 96, 38);
+}
