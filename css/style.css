@@ -209,9 +209,18 @@ body {
     }
 }
 
+@media (min-width:800px) {
+    .about .main .about-text {
+        width: 550px;
+    }
+}
+
 @media (max-width:800px) {
     .about .main{
         display: block;
+    }
+    .about .about-text{
+        width: 100%;
     }
 }
 
@@ -248,6 +257,7 @@ body {
     width: 100%;
     padding: 100px 0;
     background-color: #fff;
+    overflow: hidden;
 }
 
 .main {
@@ -261,12 +271,12 @@ body {
 
 .about .main img {
     height: auto;
-    width: 430px;
+    width: 370px;
 }
 
-.about .main .about-text {
+/* .about .main .about-text {
     width: 550px;
-}
+} */
 
 .about .main .about-text h2 {
     color: var(--green);
