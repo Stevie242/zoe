@@ -3,10 +3,6 @@
     src: url(../fonts/Poppins-Regular.ttf);
 }
 
-@font-face {
-    font-family: bebas;
-    src: url(../fonts/bebasNeue/BebasNeue-Regular.ttf);
-}
 
 :root{
     --orange-zoe:rgb(241, 96, 38);
@@ -272,11 +268,19 @@ tbody tr td{
 }
 
 .board .active p{
-    background: #c4f8c8;
+    background: var(--green-zoe);
     padding: 2px 10px;
     display: inline-block;
     border-radius: 40px;
-    color: #2B2B2B;
+    color: #ffffff;
+}
+
+.board .wait p{
+    background: var(--orange-zoe);
+    padding: 2px 10px;
+    display: inline-block;
+    border-radius: 40px;
+    color: #fff;
 }
 
 .board .edit a {
@@ -360,11 +364,6 @@ tbody tr td{
         padding: 15px;
     }
 
-    /* .board{
-        width: 90%;
-        padding: 0;
-        overflow-x: auto;
-    } */
 }
 
 .pagination > .active > a, 
@@ -390,4 +389,75 @@ tbody tr td{
 .page-item.active .page-link {
     background-color: rgb(241, 96, 38);
     border-color: rgb(241, 96, 38);
+}
+
+
+/* Change state  modal*/
+
+#changeState .button-action{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 30px;
+}
+
+#changeState .button-action a{
+    display: inline-block;
+    width: 40%;
+    padding: 10px 15px;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+#changeState .button-action a:first-child{
+    background-color: var(--green-zoe);
+    margin-right: 20px;
+}
+
+#changeState .button-action a:first-child:hover{
+    background-color: var(--green-zoe-reverse);
+    margin-right: 20px;
+}
+
+#changeState .button-action a:last-child{
+    background-color: var(--orange-zoe);
+}
+
+#changeState .button-action a:last-child:hover{
+    background-color: var(--orange-zoe-reverse);
+}
+
+/* Profile */
+.my-profile{
+    padding: 10px 20px;
+}
+
+.my-profile .info-pers{
+    background: #fff;
+    padding: 10px 20px;
+    border-radius: 30px;
+}
+
+.my-profile .info-pers h6,
+.my-profile .info-pers h5,
+.my-profile .info-pers h4,
+.my-profile .info-pers h3,
+.my-profile .info-pers h2,
+.my-profile .info-pers h1{
+    text-align: center;
+}
+
+.my-profile .info-pers .user-profile .img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.my-profile .info-pers .user-profile .img img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
 }

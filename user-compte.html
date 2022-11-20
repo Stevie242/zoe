@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./vendors/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="./vendors/font-awesome/css/all.min.css">
+    <link rel="stylesheet" href="./css/admin.css">
+    <link rel="shortcut icon" href="./img/fav-icon.png" type="image/x-icon">
+    <title>ZOE | Transport et logistique</title>
+</head>
+
+<body>
+
+    <section id="menu">
+        <div class="logo">
+            <img src="img/logo.png" alt="logo-zoe">
+        </div>
+
+        <div class="items">
+            <li><i class="fa-solid fa-chart-pie"></i><a href="user-dashboard.html">Tableau de bord</a></li>
+            <li class="active"><i class="fa-solid fa-user-gear"></i></i><a href="user-compte.html">Mon compte</a></li>
+            <li id="logout"><i class="fa-solid fa-right-from-bracket"></i><a href="index.html">Deconnexion</a></li>
+        </div>
+    </section>
+
+    <section id="interface">
+        <div class="navigation">
+            <div class="n1">
+                <div>
+                    <i id="menu-btn" class="fas fa-bars"></i>
+                </div>
+                <div class="title">
+                    <h3><span>ZOE</span> <span>T & L</span></h3>
+                </div>
+            </div>
+            <div class="profile">
+                <img src="img/profile/profile.png" alt="">
+            </div>
+        </div>
+
+        <h3 class="i-name">
+            Mon compte
+        </h3>
+
+        <div class="my-profile">
+            <div class="info-pers">
+                <h5>Information personnelle</h5>
+                <div class="user-profile">
+                    <div class="img">
+                        <img src="img/profile/profile.png" alt="" width="150px" height="150px">
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6">
+                            Nom
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            Numéro
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Change statut reservation -->
+    <div class="modal fade" id="changeState" tabindex="-1" aria-labelledby="changeStateLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="content-modal text-center">
+                <h5>Validation de la réservation</h5>
+                <div class="button-action">
+                    <a href="">Oui</a>
+                    <a href="">Non</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>      
+    <!-- >Change statut reservation -->
+
+    <script src="./vendors/jquery/jquery-3.6.1.min.js"></script>
+    <script src="./vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/jquery.dataTables.min.js"></script>
+    <script src="./js/dataTables.bootstrap4.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
