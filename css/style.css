@@ -8,8 +8,6 @@
 @font-face {
     font-family: 'Noto sans';
     src: url(../fonts/NotoSans/NotoSans-Regular.ttf);
-    /* src: url(../font/NotoSans/NotoSans-Black.ttf); */
-    /* src: url(../font/NotoSans/NotoSans-Bold.ttf); */
 }
 
 * {
@@ -34,6 +32,11 @@ body {
     background-position: center;
 }
 
+.header{
+    background: #fff;
+}
+
+.header nav .menu-toggle,
 .hero nav .menu-toggle {
     border: none;
     color: var(--orange);
@@ -46,7 +49,6 @@ body {
     display: none;
 }
 
-
 .hero nav {
     display: flex;
     align-items: center;
@@ -54,15 +56,25 @@ body {
     padding: 45px 8% 0 8%;
 }
 
+.header nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 45px 8%;
+}
+
+.header nav img.logo,
 .hero nav img.logo {
     width: 80px;
     height: 80px;
 }
 
+.header nav ul,
 .hero nav ul {
     margin-bottom: 0;
 }
 
+.header nav ul li,
 .hero nav ul li {
     list-style: none;
     display: inline-block;
@@ -77,12 +89,22 @@ body {
     padding-bottom: 10px;
 }
 
+.header nav ul li a{
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: capitalize;
+    padding-bottom: 10px;
+}
+
+.header nav ul li a:hover,
 .hero nav ul li a:hover {
     color: var(--orange);
     border-bottom: 2px solid var(--orange);
     transition: 0.4s;
 }
 
+.header nav .button,
 .hero nav .button {
     background: var(--orange);
     color: #fff;
@@ -94,6 +116,7 @@ body {
     transition: transform .4s;
 }
 
+.header nav .button:hover,
 .hero nav .button:hover {
     transform: scale(1.2);
 }
@@ -115,6 +138,7 @@ body {
 .hero .content h1 span {
     color: var(--green);
 }
+
 
 .hero .content h3 {
     color: #fff;
@@ -164,6 +188,10 @@ body {
     cursor: pointer;
 }
 
+.nav-mobile .menu-wrapper ul{
+    padding-left: 0;
+}
+
 .nav-mobile .menu-wrapper ul li{
     padding: 10px 15px;
     display: block;
@@ -190,11 +218,14 @@ body {
 
 @media (max-width:860px) {
 
+    .header nav .button,
+    .header nav ul.menu-lg,
     .hero nav .button,
     .hero nav ul.menu-lg{
         display: none;
     }
 
+    .header nav .menu-toggle,
     .hero nav .menu-toggle{
         display: block;
         cursor: pointer;
@@ -685,7 +716,70 @@ footer{
     display: none;
 }
 
+/* Banniere */
+.banniere{
+    width: 100%;
+    padding: 100px 40px;
+}
+
+.banniere .title h2{
+    color: #fff;
+    font-size: 50px;
+    position: relative;
+}
+
+.banniere .title h2::before{
+    content: '';
+    position: absolute;
+    height: 4px;
+    width: 170px;
+    left: 0;
+    bottom: -10px;
+    background-color: var(--orange);
+    transition: .3s ease;
+    animation: lice-no 6s forwards;
+}
+
+@keyframes lice-no{
+    0%{
+        width: 0px;
+    }
+    55%{
+        width: 0px;
+    }
+    100%{
+        width: 170px;
+    }
+}
+
+.banniere .title{
+    transition: all .4s ease;
+    animation: slide-right 3s forwards;
+    transform: translateX(-50%);
+    opacity: 0;
+}
+
+@keyframes slide-right {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: .7;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
 /* Contact */
+
+.com-zephir{
+    background-color: #fff;
+    padding: 50px 30px;
+    margin-top: 50px;
+    border-radius: 10px;
+}
 .contact .title {
     font-size: 28px;
     font-weight: 600;
@@ -710,7 +804,8 @@ footer{
 .form-contact .form-group input[type=tel],
 .form-contact .form-group input[type=email],
 .form-contact .form-group input[type=text] {
-    border: none;
+    border: 2px solid rgb(150, 128, 128);
+    background-color: rgb(250, 242, 242);
     padding: 10px;
     margin-bottom: 20px;
     width: 100%;
@@ -753,89 +848,6 @@ footer{
 
 .address .min-desc {
     font-size: 16px;
-}
-
-/* About-us home */
-
-.about-us {
-    margin-top: 30px;
-}
-
-.about-us .title {
-    text-align: center;
-    font-size: 28px;
-    color: rgb(241, 96, 38);
-}
-
-.about-us .description {
-    text-align: center;
-    margin-top: 15px;
-}
-
-
-/* FAQs */
-.faqs {
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-.faqs .title {
-    text-align: center;
-    font-size: 28px;
-    color: rgb(241, 96, 38);
-}
-
-.faqs .img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-}
-
-.faqs .img img {
-    width: 300px;
-    height: 300px;
-}
-
-/* Banns */
-
-.about-us .title,
-.main .title,
-.faqs .title {
-    padding: 15px 30px;
-    background-color: #fff;
-}
-
-
-
-/* Modif */
-.accordion-button-zoe:not(.collapsed) {
-    color: rgb(241, 96, 38) !important;
-    background-color: rgba(247, 162, 128, 0.411) !important;
-    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .125);
-}
-
-.accordion-button:focus {
-    border-color: rgb(241, 96, 38) !important;
-    box-shadow: 0 0 0 .25rem rgba(241, 96, 38, 0.438);
-}
-
-/* Button */
-.btn-zoe-link {
-    padding: 10px 20px;
-    background-color: rgb(241, 96, 38);
-    border-radius: 10px;
-    color: #fff;
-    font-weight: 500;
-}
-
-.btn-zoe-link:hover {
-    padding: 10px 20px;
-    background-color: rgb(163, 60, 19);
-    border-radius: 10px;
-    color: #fff;
-    font-weight: 500;
 }
 
 /* User dashboard */
@@ -1060,3 +1072,80 @@ table.dataTable thead>tr>td.sorting {
 
 }
 
+/* Réservation */
+.com-zephir h5{
+    text-align: center;
+    color: var(--orange);
+    font-size: 26px;
+    font-weight: 500;
+    position: relative;
+}
+
+.com-zephir h5::before{
+    content: '';
+    position: absolute;
+    height: 3px;
+    /* width: 150px; */
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--orange);
+    transition: .3s ease;
+    animation: lice-loop 6s infinite;
+}
+
+@keyframes lice-loop{
+    0%{
+        width: 1px;
+    }
+    50%{
+        width: 150px;
+    }
+    100%{
+        width: 1px;
+    }
+}
+
+.com-zephir .form-group{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+}
+
+.com-zephir .form-group label{
+    font-size: 18px;
+    color: #242222;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.com-zephir .form-group input,
+.com-zephir .form-group select{
+    padding: 15px 30px;
+    font-size: 16px;
+    border: none;
+    border-bottom: 3px solid var(--orange);
+    background: rgb(255, 244, 244);
+    outline: none;
+}
+
+.com-zephir .form-submit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+}
+
+.com-zephir .form-submit button{
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--orange);
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.com-zephir .form-submit button:hover{
+    background-color: var(--orange-reverse);
+}
