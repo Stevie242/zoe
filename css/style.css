@@ -268,6 +268,25 @@ body {
         transition: .3s ease;
         transform: translateX(0%);
     }
+
+    .hero .content h1 {
+        color: #fff;
+        margin: 20px 0 20px;
+        font-size: 40px;
+        text-transform: capitalize;
+    }
+    
+    .hero .content h1 span {
+        color: var(--green-texte);
+        font-size: 45px;
+        font-weight: 700;
+    }
+    
+    
+    .hero .content h3 {
+        font-size: 20px;
+    }
+    
 }
 
 @media (min-width:800px) {
@@ -458,8 +477,9 @@ body {
     height: 370px;
     width: 335px;
     padding: 20px 35px;
-    background: rgb(192, 255, 187);
-    border-radius: 20px;
+    background: transparent;
+    border-radius: 0px;
+    border: 1px solid #f85e05b7;
     margin: 15px;
     position: relative;
     overflow: hidden;
@@ -478,7 +498,7 @@ body {
 }
 
 .service .box .card-box h5 {
-    color: #000;
+    color: #fff;
     font-size: 23px;
     margin-bottom: 15px;
     text-transform: capitalize;
@@ -489,7 +509,7 @@ body {
     font-size: 16px;
     line-height: 27px;
     margin-bottom: 25px;
-    color: rgb(37, 35, 35);
+    color: rgb(236, 236, 236);
 }
 
 .service .box .card-box .pra .button {
@@ -550,13 +570,13 @@ section.destination {
 
 .destination .destination-content .col-content {
     position: relative;
-    transform: translateX(400%);
-    transition: transform 0.4s ease;
+    transform: translateX(-400%);
+    transition: transform 1.4s ease;
 }
 
 
 .destination .destination-content .col-content:nth-of-type(event) {
-    transform: translateX(-400%);
+    transform: translateX(400%);
 }
 
 .destination .destination-content .col-content.show {
@@ -886,7 +906,7 @@ footer {
 .form-contact {
     margin-top: 10px;
 }
-
+/* 
 .form-contact .form-group label {
     display: none;
 }
@@ -929,7 +949,7 @@ footer {
 
 .form-contact .form-submit button:hover {
     background-color: rgb(207, 64, 7);
-}
+} */
 
 
 .address .min-title {
@@ -1170,6 +1190,15 @@ tbody tr td {
     outline: none;
 }
 
+.com-zephir .form-group textarea {
+    padding: 15px 30px;
+    font-size: 16px;
+    border: none;
+    border: 3px solid var(--orange);
+    background: rgb(255, 244, 244);
+    outline: none;
+}
+
 .com-zephir .form-submit {
     display: flex;
     justify-content: center;
@@ -1185,6 +1214,7 @@ tbody tr td {
     color: #fff;
     font-size: 16px;
     text-transform: uppercase;
+    width: 250px;
 }
 
 .com-zephir .form-submit button:hover {
@@ -1219,13 +1249,13 @@ tbody tr td {
 
 .nos-tarifs .tarifs .box-tarif {
     position: relative;
-    transform: translateX(400%);
-    transition: transform 0.4s ease;
+    transform: translateX(-400%);
+    transition: transform 1.4s ease;
 }
 
 
 .nos-tarifs .tarifs .box-tarif:nth-of-type(event) {
-    transform: translateX(-400%);
+    transform: translateX(400%);
 }
 
 .nos-tarifs .tarifs .box-tarif.show {
@@ -1257,7 +1287,7 @@ tbody tr td {
     top: 0;
 }
 
-.nos-tarifs .tarifs .box-tarif .thum h3 {
+/* .nos-tarifs .tarifs .box-tarif .thum h3 {
     position: absolute;
     font-size: 20px;
     font-weight: 600;
@@ -1265,6 +1295,17 @@ tbody tr td {
     color: #fff;
     top: 180px;
     right: 40px;
+} */
+
+.nos-tarifs .tarifs .box-tarif .tarif-content{
+    display: flex;
+    justify-content: space-between;
+}
+
+.nos-tarifs .tarifs .box-tarif .tarif-content .price-dest h3{
+    font-size: 20px;
+    font-weight: 600;
+    color: #058849;
 }
 
 .nos-tarifs .tarifs .box-tarif .tarif-content .location h4 {
