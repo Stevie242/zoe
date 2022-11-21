@@ -50,263 +50,147 @@
             Mon compte
         </h3>
 
-        <div class="cards row">
-            <div class="col-sm-12 col-md-6 col-lg-3">
-                <div class="carte">
-                    <i class="fas fa-users"></i>
-                    <div>
-                        <h3>10</h3>
-                        <span>users</span>
+        <div class="my-profile">
+            <div class="info-pers">
+                <div class="user-profile row">
+                    <div class="col-md-3 col-sm-12">
+                        <div class="img">
+                            <img src="img/profile/profile.png" alt="" width="150px" height="150px">
+                        </div>
+                    </div>
+                    <div class="col-md-9 col-sm-12">
+                        <div class="prof row">
+                            <div class="col-md-6 col-sm-12">
+                                <div class="prof-form">
+                                    <h5>Nom :</h5>
+                                    <span>ALaxander Poaty</span>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                                <div class="prof-form">
+                                    <h5>Email :</h5>
+                                    <span>alexander_p@gmail.com</span>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                                <div class="prof-form">
+                                    <h5>Numéro :</h5>
+                                    <span>066065050</span>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                                <div class="prof-form">
+                                    <h5>Date de naissance :</h5>
+                                    <span>1/1/1990</span>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                                <div class="prof-form">
+                                    <h5>Ville :</h5>
+                                    <span>Pointe-Noire</span>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                                <div class="prof-form">
+                                    <h5>Rôle :</h5>
+                                    <span>Admin</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-3">
-                <div class="carte">
-                    <i class="fas fa-users"></i>
-                    <div>
-                        <h3>10</h3>
-                        <span>users</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-3">
-                <div class="carte">
-                    <i class="fas fa-users"></i>
-                    <div>
-                        <h3>10</h3>
-                        <span>users</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-3">
-                <div class="carte">
-                    <i class="fas fa-users"></i>
-                    <div>
-                        <h3>10</h3>
-                        <span>users</span>
-                    </div>
+                <div class="info-update">
+                    <button data-bs-toggle="modal" data-bs-target="#editProfile">Modifier profil</button>
                 </div>
             </div>
         </div>
 
-        <div class="board">
-            <table width="100%" id="user-historique" class="dataTable">
-                <thead>
-                    <tr>
-                        <td>Nom</td>
-                        <td>Destination</td>
-                        <td>Date depart</td>
-                        <td>Nombre de passager</td>
-                        <td>Tarifs</td>
-                        <td>Status</td>
-                        <td></td>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="people">
-                            <img src="img/profile/profile.png" alt="">
-                            <div class="people-name">
-                                <h5>Alexander Poaty</h5>
-                                <p>(+242) 066065050</p>
-                            </div>
-                        </td>
-                        <td class="people-destination">
-                            <h5>Brazzaville</h5>
-                        </td>
-                        <td class="people-date">
-                            <h5>26/11/2022</h5>
-                        </td>
-                        <td class="people-count">
-                            <h5>1</h5>
-                        </td>
-                        <td class="people-price">
-                            <h5>15000</h5>
-                        </td>
-                        <td class="active">
-                            <p>Reserver</p>
-                        </td>
-                        <td class="edit"><a href="">Edit</a></td>
-                    </tr>
-                    <tr>
-                        <td class="people">
-                            <img src="img/profile/profile.png" alt="">
-                            <div class="people-name">
-                                <h5>Alexander Poaty</h5>
-                                <p>(+242) 066065050</p>
-                            </div>
-                        </td>
-                        <td class="people-destination">
-                            <h5>Brazzaville</h5>
-                        </td>
-                        <td class="people-date">
-                            <h5>26/11/2022</h5>
-                        </td>
-                        <td class="people-count">
-                            <h5>1</h5>
-                        </td>
-                        <td class="people-price">
-                            <h5>15000</h5>
-                        </td>
-                        <td class="active">
-                            <p>Reserver</p>
-                        </td>
-                        <td class="edit"><a href="">Edit</a></td>
-                    </tr>
-                    <tr>
-                        <td class="people">
-                            <img src="img/profile/profile.png" alt="">
-                            <div class="people-name">
-                                <h5>Alexander Poaty</h5>
-                                <p>(+242) 066065050</p>
-                            </div>
-                        </td>
-                        <td class="people-destination">
-                            <h5>Brazzaville</h5>
-                        </td>
-                        <td class="people-date">
-                            <h5>26/11/2022</h5>
-                        </td>
-                        <td class="people-count">
-                            <h5>1</h5>
-                        </td>
-                        <td class="people-price">
-                            <h5>15000</h5>
-                        </td>
-                        <td class="active">
-                            <p>Reserver</p>
-                        </td>
-                        <td class="edit"><a href="">Edit</a></td>
-                    </tr>
-                    <tr>
-                        <td class="people">
-                            <img src="img/profile/profile.png" alt="">
-                            <div class="people-name">
-                                <h5>Alexander Poaty</h5>
-                                <p>(+242) 066065050</p>
-                            </div>
-                        </td>
-                        <td class="people-destination">
-                            <h5>Brazzaville</h5>
-                        </td>
-                        <td class="people-date">
-                            <h5>26/11/2022</h5>
-                        </td>
-                        <td class="people-count">
-                            <h5>1</h5>
-                        </td>
-                        <td class="people-price">
-                            <h5>15000</h5>
-                        </td>
-                        <td class="active">
-                            <p>Reserver</p>
-                        </td>
-                        <td class="edit"><a href="">Edit</a></td>
-                    </tr>
-                    <tr>
-                        <td class="people">
-                            <img src="img/profile/profile.png" alt="">
-                            <div class="people-name">
-                                <h5>Alexander Poaty</h5>
-                                <p>(+242) 066065050</p>
-                            </div>
-                        </td>
-                        <td class="people-destination">
-                            <h5>Brazzaville</h5>
-                        </td>
-                        <td class="people-date">
-                            <h5>26/11/2022</h5>
-                        </td>
-                        <td class="people-count">
-                            <h5>1</h5>
-                        </td>
-                        <td class="people-price">
-                            <h5>15000</h5>
-                        </td>
-                        <td class="active">
-                            <p>Reserver</p>
-                        </td>
-                        <td class="edit"><a href="">Edit</a></td>
-                    </tr>
-                    <tr>
-                        <td class="people">
-                            <img src="img/profile/profile.png" alt="">
-                            <div class="people-name">
-                                <h5>Alexander Poaty</h5>
-                                <p>(+242) 066065050</p>
-                            </div>
-                        </td>
-                        <td class="people-destination">
-                            <h5>Brazzaville</h5>
-                        </td>
-                        <td class="people-date">
-                            <h5>26/11/2022</h5>
-                        </td>
-                        <td class="people-count">
-                            <h5>1</h5>
-                        </td>
-                        <td class="people-price">
-                            <h5>15000</h5>
-                        </td>
-                        <td class="active">
-                            <p>Reserver</p>
-                        </td>
-                        <td class="edit"><a href="">Edit</a></td>
-                    </tr>
-                    <tr>
-                        <td class="people">
-                            <img src="img/profile/profile.png" alt="">
-                            <div class="people-name">
-                                <h5>Alexander Poaty</h5>
-                                <p>(+242) 066065050</p>
-                            </div>
-                        </td>
-                        <td class="people-destination">
-                            <h5>Brazzaville</h5>
-                        </td>
-                        <td class="people-date">
-                            <h5>26/11/2022</h5>
-                        </td>
-                        <td class="people-count">
-                            <h5>1</h5>
-                        </td>
-                        <td class="people-price">
-                            <h5>15000</h5>
-                        </td>
-                        <td class="active">
-                            <p>Reserver</p>
-                        </td>
-                        <td class="edit"><a href="">Edit</a></td>
-                    </tr>
-                    <tr>
-                        <td class="people">
-                            <img src="img/profile/profile.png" alt="">
-                            <div class="people-name">
-                                <h5>Alexander Poaty</h5>
-                                <p>(+242) 066065050</p>
-                            </div>
-                        </td>
-                        <td class="people-destination">
-                            <h5>Brazzaville</h5>
-                        </td>
-                        <td class="people-date">
-                            <h5>26/11/2022</h5>
-                        </td>
-                        <td class="people-count">
-                            <h5>1</h5>
-                        </td>
-                        <td class="people-price">
-                            <h5>15000</h5>
-                        </td>
-                        <td class="active">
-                            <p>Reserver</p>
-                        </td>
-                        <td class="edit"><a href="">Edit</a></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
     </section>
+
+
+    <!-- Modal edit profile -->
+    <div class="modal fade" id="editProfile" tabindex="-1" aria-labelledby="editProfileLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editProfileLabel">Edition du profil</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-edit">
+                        <form action="">
+                            <div class="user_pic">
+                                <img src="img/" alt="">
+                                <label for="add_pic"><i class="fas fa-camera-alt"></i></label>
+                                <input type="file" name="picture" id="add_pic">
+                            </div>
+                            <div class="form-group">
+                                <label for="full_name">Nom et prénom</label>
+                                <input type="text" name="full_name" id="full_name">
+                            </div>
+                            <div class="form-group">
+                                <label for="birthday">Date de naissance</label>
+                                <input type="date" name="birthday" id="birthday">
+                            </div>
+                            <div class="form-group">
+                                <label for="city">Ville</label>
+                                <input type="text" name="city" id="city">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Téléphone</label>
+                                <input type="tel" name="phone" id="phone">
+                            </div>
+                            <div class="form-submit">
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#editPassword"
+                                    data-bs-dismiss="modal">Changer mot de passe</a href="#">
+                                <button type="submit">Mettre à jour</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Modal edit profile -->
+
+    <!-- Change password -->
+    <div class="modal fade" id="editPassword" tabindex="-1" aria-labelledby="editPasswordLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editPasswordLabel">Changer mot de passe</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-edit">
+                        <form action="">
+                            <div class="form-group">
+                                <label for="old_pwd">Ancien mot de passe</label>
+                                <input type="password" name="old_pwd" id="old_pwd"
+                                    placeholder="Tapez votre ancien mot de passe">
+                            </div>
+                            <div class="form-group">
+                                <label for="pwd">Nouveau mot de passe</label>
+                                <input type="password" name="pwd" id="pwd"
+                                    placeholder="Tapez votre nouveau mot de passe">
+                            </div>
+                            <div class="form-group">
+                                <label for="conf_pwd">Confirmer votre mot de passe</label>
+                                <input type="password" name="conf_pwd" id="conf_pwd"
+                                    placeholder="Retapez votre nouveau mot de passe">
+                            </div>
+                            <div class="form-submit">
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#editProfile"
+                                    data-bs-dismiss="modal">Editer profil</a>
+                                <button type="submit">Mettre à jour</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Change password -->
 
     <script src="./vendors/jquery/jquery-3.6.1.min.js"></script>
     <script src="./vendors/bootstrap/js/bootstrap.bundle.min.js"></script>

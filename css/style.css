@@ -1,6 +1,7 @@
 :root {
     --orange: rgb(247, 89, 16);
     --orange-reverse: rgb(211, 73, 9);
+    --green-texte: #058849;
     --green: rgb(35, 247, 16);
     --green-reverse: rgb(25, 168, 12);
     --table-tr-color: #eef0f3;
@@ -129,6 +130,25 @@ body {
     top: 50%;
     left: 8%;
     transform: translateY(-50%);
+    transform: translateX(-400%);
+    animation: text-appaer 2s forwards;
+    transition: 0.4s ease;
+    opacity: 0;
+}
+
+@keyframes text-appaer {
+    50% {
+        opacity: .3;
+    }
+
+    75% {
+        opacity: .5;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
 .hero .content h1 {
@@ -139,7 +159,9 @@ body {
 }
 
 .hero .content h1 span {
-    color: var(--green);
+    color: var(--green-texte);
+    font-size: 55px;
+    font-weight: 700;
 }
 
 
@@ -308,6 +330,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    overflow: hidden;
 }
 
 .about .main img {
@@ -318,9 +341,32 @@ body {
 /* .about .main .about-text {
     width: 550px;
 } */
+.about .main .about-text {
+    opacity: 0;
+}
+
+.about .main .about-text.show {
+    opacity: 0;
+    position: relative;
+    transform: translateX(400%);
+    transition: .5s ease;
+    animation: appaer 2s forwards;
+}
+
+
+@keyframes appaer {
+    75% {
+        opacity: .6;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
 
 .about .main .about-text h2 {
-    color: var(--green);
+    color: var(--green-texte);
     font-size: 50px;
     text-transform: capitalize;
     margin-bottom: 20px;
@@ -358,6 +404,8 @@ body {
     padding: 10px 25px;
     border-radius: 30px;
     transition: .4s;
+    position: relative;
+    top: -18px;
 }
 
 .about .main .about-text a:hover {
@@ -393,7 +441,7 @@ body {
 
 .service .title h2 {
     color: #fff;
-    font-size: 50px;
+    font-size: 40px;
     /* width: 1130px; */
     margin: 15px auto;
     text-align: center;
@@ -465,16 +513,31 @@ body {
 
 /* Nos destination */
 section.destination {
-    padding: 80px 30px;
+    padding: 80px 20px;
     background-color: #fff;
+    overflow: hidden;
 }
 
 .destination .title h2 {
-    color: var(--green);
-    font-size: 50px;
+    color: var(--green-texte);
+    font-size: 40px;
     /* width: 1130px; */
     margin: 15px auto;
     text-align: center;
+    position: relative;
+}
+
+.destination .title h2::before {
+    content: '';
+    position: absolute;
+    height: 3px;
+    /* width: 150px; */
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--green-texte);
+    transition: .3s ease;
+    animation: lice-loop 6s infinite;
 }
 
 .destination .destination-content {
@@ -487,13 +550,24 @@ section.destination {
 
 .destination .destination-content .col-content {
     position: relative;
+    transform: translateX(400%);
+    transition: transform 0.4s ease;
+}
+
+
+.destination .destination-content .col-content:nth-of-type(event) {
+    transform: translateX(-400%);
+}
+
+.destination .destination-content .col-content.show {
+    transform: translateX(0);
 }
 
 .destination .destination-content .col-content img {
     width: 100%;
     height: 350px;
     object-fit: cover;
-    border-radius: 15px;
+    border-radius: 0;
     filter: brightness(80%);
     transition: all .3s cubic-bezier(.495, .05, .55, .95);
     will-change: filter;
@@ -501,7 +575,7 @@ section.destination {
 
 .destination .destination-content .col-content h5 {
     position: absolute;
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 500;
     color: #fff;
     left: 15px;
@@ -530,7 +604,7 @@ footer {
 }
 
 .footer-title {
-    color: rgb(126, 245, 58);
+    color: var(--green-texte);
     margin-top: 10px;
     margin-bottom: 10Px;
     font-size: 20px;
@@ -975,15 +1049,15 @@ footer {
     color: rgb(241, 96, 38);
 }
 
-table{
+table {
     border-collapse: collapse;
 }
 
-tr{
+tr {
     border-bottom: 1px solid var(--table-tr-color);
 }
 
-thead td{
+thead td {
     font-size: 14px;
     text-transform: uppercase;
     font-weight: 400;
@@ -992,29 +1066,32 @@ thead td{
     padding: 15px;
 }
 
-tbody tr td{
+tbody tr td {
     padding: 10px 15px;
 }
 
 
-.pagination > .active > a, 
-.pagination > .active > a:focus,
-.pagination > .active > a:hover, 
-.pagination > .active > span,
-.pagination > .active > span:focus,
-.pagination > .active > span:hover {
-	background-color: rgb(241, 96, 38);
-	border-color: rgb(241, 96, 38);
+.pagination>.active>a,
+.pagination>.active>a:focus,
+.pagination>.active>a:hover,
+.pagination>.active>span,
+.pagination>.active>span:focus,
+.pagination>.active>span:hover {
+    background-color: rgb(241, 96, 38);
+    border-color: rgb(241, 96, 38);
 }
-.pagination > li > a, 
-.pagination > li > span {
-	color: rgb(241, 96, 38);
+
+.pagination>li>a,
+.pagination>li>span {
+    color: rgb(241, 96, 38);
 }
+
 .page-link:hover {
-	color: rgb(241, 96, 38);
+    color: rgb(241, 96, 38);
 }
+
 .page-link:focus {
-	box-shadow: unset;
+    box-shadow: unset;
 }
 
 .page-item.active .page-link {
@@ -1133,10 +1210,26 @@ tbody tr td{
 
 .nos-tarifs .tarifs {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(300px,auto));
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
     grid-gap: 2rem;
     align-items: center;
     margin-top: 5rem;
+    overflow: hidden;
+}
+
+.nos-tarifs .tarifs .box-tarif {
+    position: relative;
+    transform: translateX(400%);
+    transition: transform 0.4s ease;
+}
+
+
+.nos-tarifs .tarifs .box-tarif:nth-of-type(event) {
+    transform: translateX(-400%);
+}
+
+.nos-tarifs .tarifs .box-tarif.show {
+    transform: translateX(0);
 }
 
 .nos-tarifs .tarifs .box-tarif .thum {
@@ -1146,17 +1239,17 @@ tbody tr td{
     cursor: pointer;
 }
 
-.nos-tarifs .tarifs .box-tarif .thum img{
+.nos-tarifs .tarifs .box-tarif .thum img {
     width: 100%;
     height: auto;
     object-fit: cover;
     position: relative;
-    border-radius: 10px;
+    border-radius: 0;
 }
 
-.nos-tarifs .tarifs .box-tarif .thum img::after{
+.nos-tarifs .tarifs .box-tarif .thum img::after {
     content: '';
-    background: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5));
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5));
     width: 100%;
     height: 100%;
     position: absolute;
@@ -1164,9 +1257,9 @@ tbody tr td{
     top: 0;
 }
 
-.nos-tarifs .tarifs .box-tarif .thum h3{
+.nos-tarifs .tarifs .box-tarif .thum h3 {
     position: absolute;
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 600;
     text-align: right;
     color: #fff;
@@ -1174,19 +1267,19 @@ tbody tr td{
     right: 40px;
 }
 
-.nos-tarifs .tarifs .box-tarif .tarif-content .location h4{
-    font-size: 24px;
+.nos-tarifs .tarifs .box-tarif .tarif-content .location h4 {
+    font-size: 18px;
     font-weight: 600;
     margin-bottom: 8px;
     margin-top: 5px;
 }
 
-.nos-tarifs .tarifs .box-tarif .tarif-content .location p{
-    font-size: 15px;
+.nos-tarifs .tarifs .box-tarif .tarif-content .location p {
+    font-size: 14px;
     color: #8d8787;
 }
 
-.nos-tarifs .tarifs .box-tarif .thum:hover{
+.nos-tarifs .tarifs .box-tarif .thum:hover {
     filter: brightness(100%) hue-rotate(45deg);
     transform: scale(1.04);
 }
@@ -1247,7 +1340,7 @@ tbody tr td{
     margin-bottom: 20px;
 }
 
-.form-edit .form-submit a{
+.form-edit .form-submit a {
     /* width: 50%; */
     padding: 10px 20px;
     border: none;
