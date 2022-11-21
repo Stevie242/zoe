@@ -3,6 +3,8 @@
     --orange-reverse: rgb(211, 73, 9);
     --green: rgb(35, 247, 16);
     --green-reverse: rgb(25, 168, 12);
+    --table-tr-color: #eef0f3;
+    --thead-bg-color: #f9fafB;
 }
 
 @font-face {
@@ -19,6 +21,7 @@
 
 body {
     background: rgb(238, 237, 237);
+    /* overflow: hidden; */
 }
 
 
@@ -210,13 +213,13 @@ body {
     text-decoration: none;
 }
 
-@media (min-width:860px) {
+@media (min-width:870px) {
     .nav-mobile {
         display: none;
     }
 }
 
-@media (max-width:860px) {
+@media (max-width:870px) {
 
     .header nav .button,
     .header nav ul.menu-lg,
@@ -233,13 +236,15 @@ body {
 
 
     .nav-mobile {
-        display: none;
+        display: block;
+        transform: translateX(100%);
         transition: .3s ease;
     }
 
     .nav-mobile.active {
         display: block;
         transition: .3s ease;
+        transform: translateX(0%);
     }
 }
 
@@ -970,108 +975,53 @@ footer {
     color: rgb(241, 96, 38);
 }
 
-/*-----------------
-	2. Table
------------------------*/
-
-.table-responsive {
-    white-space: nowrap;
-    width: 100%;
+table{
+    border-collapse: collapse;
 }
 
-.table {
-    color: #333;
+tr{
+    border-bottom: 1px solid var(--table-tr-color);
 }
 
-.table.table-white {
-    background-color: #fff;
-}
-
-.table thead th {
-    font-weight: 500;
-    letter-spacing: 0.05em;
-}
-
-.table-striped>tbody>tr:nth-of-type(2n+1) {
-    background-color: #f6f6f6;
-}
-
-table.table td h2 {
-    display: inline-block;
-    font-size: inherit;
+thead td{
+    font-size: 14px;
+    text-transform: uppercase;
     font-weight: 400;
-    margin: 0;
-    padding: 0;
-    vertical-align: middle;
+    background: var(--thead-bg-color);
+    text-align: start;
+    padding: 15px;
 }
 
-table.table td h2.table-avatar {
-    align-items: center;
-    display: inline-flex;
-    font-size: inherit;
-    font-weight: 400;
-    margin: 0;
-    padding: 0;
-    vertical-align: middle;
-    white-space: nowrap;
+tbody tr td{
+    padding: 10px 15px;
 }
 
-table.table td h2.table-avatar.blue-link a {
-    color: #007bff;
-}
 
-table.table td h2 a {
-    color: #333;
+.pagination > .active > a, 
+.pagination > .active > a:focus,
+.pagination > .active > a:hover, 
+.pagination > .active > span,
+.pagination > .active > span:focus,
+.pagination > .active > span:hover {
+	background-color: rgb(241, 96, 38);
+	border-color: rgb(241, 96, 38);
 }
-
-table.table td h2 a:hover {
-    color: #f43b48;
+.pagination > li > a, 
+.pagination > li > span {
+	color: rgb(241, 96, 38);
 }
-
-table.table td h2 span {
-    color: #888;
-    display: block;
-    font-size: 12px;
-    margin-top: 3px;
+.page-link:hover {
+	color: rgb(241, 96, 38);
 }
-
-table.dataTable {
-    margin-bottom: 15px !important;
-    margin-top: 15px !important;
-}
-
-.table-nowrap td,
-.table-nowrap th {
-    white-space: nowrap
-}
-
-.table-hover tbody tr:hover {
-    background-color: #f7f7f7;
-    color: #212529;
-}
-
-table.dataTable thead>tr>th.sorting_asc,
-table.dataTable thead>tr>th.sorting_desc,
-table.dataTable thead>tr>th.sorting,
-table.dataTable thead>tr>td.sorting_asc,
-table.dataTable thead>tr>td.sorting_desc,
-table.dataTable thead>tr>td.sorting {
-    padding-right: 30px !important;
-}
-
-.table.custom-table>tbody>tr>td,
-.table.custom-table>tbody>tr>th,
-.table.custom-table>tfoot>tr>td,
-.table.custom-table>tfoot>tr>th,
-.table.custom-table>thead>tr>td,
-.table.custom-table>thead>tr>th {
-    padding: 10px 20px !important;
+.page-link:focus {
+	box-shadow: unset;
 }
 
 .page-item.active .page-link {
     background-color: rgb(241, 96, 38);
     border-color: rgb(241, 96, 38);
 }
+
 
 @media (max-width: 768px) {
     .user-dash .user-profil .info {
@@ -1239,4 +1189,124 @@ table.dataTable thead>tr>td.sorting {
 .nos-tarifs .tarifs .box-tarif .thum:hover{
     filter: brightness(100%) hue-rotate(45deg);
     transform: scale(1.04);
+}
+
+
+/* Modal edit profile */
+.form-edit {
+    display: block;
+    padding: 15px 20px;
+    background: #fff;
+    border-radius: 15px;
+}
+
+.form-edit h5 {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.form-edit .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.form-edit .form-group label {
+    margin-bottom: 10px;
+    font-size: 17px;
+}
+
+.form-edit .form-group input {
+    border: 2px solid rgb(111, 253, 106);
+    border-radius: 10px;
+    height: 45px;
+    font-size: 17px;
+    padding: 10px 15px;
+    outline: none;
+}
+
+.form-edit .forgot-pwd {
+    text-align: end;
+    margin-bottom: 20px;
+}
+
+.form-edit .forgot-pwd a {
+    text-decoration: none;
+    color: #363232;
+    font-size: 16px;
+}
+
+.form-edit .forgot-pwd a:hover {
+    text-decoration: underline;
+}
+
+.form-edit .form-submit {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.form-edit .form-submit a{
+    /* width: 50%; */
+    padding: 10px 20px;
+    border: none;
+    background-color: var(--orange);
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.form-edit .form-submit button {
+    /* width: 50%; */
+    padding: 10px 20px;
+    border: none;
+    background-color: rgba(111, 253, 106, 0.616);
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    color: rgb(4, 73, 2);
+}
+
+.form-edit .signup-link {
+    text-align: center;
+}
+
+.form-edit .signup-link a {
+    color: rgb(16, 108, 245);
+    font-weight: 600;
+}
+
+.form-edit .user_pic {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.form-edit .user_pic img {
+    width: 150px;
+    height: 150px;
+    border: 2px solid rgba(16, 108, 245, 0.521);
+    padding: 5px;
+    border-radius: 50%;
+
+}
+
+.form-edit .user_pic label {
+    position: absolute;
+    font-size: 30px;
+    background-color: #ccc;
+    padding: 10px;
+    border-radius: 50%;
+    color: rgb(255, 254, 254);
+    opacity: .6;
+    /* bottom: -15px;
+    right: 150px; */
+}
+
+
+.form-edit .user_pic input {
+    display: none;
 }
