@@ -22,9 +22,9 @@
 
         <div class="items">
             <li><i class="fa-solid fa-chart-pie"></i><a href="admin-index.html">Tableau de bord</a></li>
-            <li><i class="fas fa-users-line"></i><a href="admin-reservation.html">Reservation clients</a></li>
-            <li><i class="fa-solid fa-location-pin"></i><a href="admin-ges-destination.html">Gestion des destination</a></li>
-            <li class="active"><i class="fa-solid fa-money-bill"></i><a href="admin-ges-tarifs.html">Gestion des tarifs</a></li>
+            <li class="active"><i class="fa-solid fa-location-pin"></i><a href="admin-ges-destination.html">Gestion des
+                    destination</a></li>
+            <li><i class="fa-solid fa-money-bill"></i><a href="admin-ges-tarifs.html">Gestion des tarifs</a></li>
             <li><i class="fa-solid fa-users"></i></i><a href="admin-ges-users.html">Gestion des utilisateurs</a></li>
             <li><i class="fa-solid fa-user-gear"></i></i><a href="admin-mon-compte.html">Mon compte</a></li>
             <li id="logout"><i class="fa-solid fa-right-from-bracket"></i><a href="index.html">Déconnexion</a></li>
@@ -50,263 +50,130 @@
             Gestion des tarifs
         </h3>
 
-        <div class="cards row">
-            <div class="col-sm-12 col-md-6 col-lg-3">
-                <div class="carte">
-                    <i class="fas fa-users"></i>
-                    <div>
-                        <h3>10</h3>
-                        <span>users</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-3">
-                <div class="carte">
-                    <i class="fas fa-users"></i>
-                    <div>
-                        <h3>10</h3>
-                        <span>users</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-3">
-                <div class="carte">
-                    <i class="fas fa-users"></i>
-                    <div>
-                        <h3>10</h3>
-                        <span>users</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-3">
-                <div class="carte">
-                    <i class="fas fa-users"></i>
-                    <div>
-                        <h3>10</h3>
-                        <span>users</span>
-                    </div>
-                </div>
-            </div>
+        <div class="btn-add-dest">
+            <button data-bs-toggle="modal" data-bs-target="#addPrice">Ajouter Tarif</button>
         </div>
 
         <div class="board">
             <table width="100%" id="user-historique" class="dataTable">
                 <thead>
                     <tr>
-                        <td>Nom</td>
+                        <td>Départ</td>
                         <td>Destination</td>
-                        <td>Date depart</td>
-                        <td>Nombre de passager</td>
-                        <td>Tarifs</td>
-                        <td>Status</td>
+                        <td>Prix</td>
                         <td></td>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td class="people">
-                            <img src="img/profile/profile.png" alt="">
-                            <div class="people-name">
-                                <h5>Alexander Poaty</h5>
-                                <p>(+242) 066065050</p>
-                            </div>
+                        <td class="people-destination">
+                            <h5>Pointe-Noire</h5>
                         </td>
                         <td class="people-destination">
                             <h5>Brazzaville</h5>
                         </td>
                         <td class="people-date">
-                            <h5>26/11/2022</h5>
+                            <h5>15 000 Fcfa</h5>
                         </td>
-                        <td class="people-count">
-                            <h5>1</h5>
-                        </td>
-                        <td class="people-price">
-                            <h5>15000</h5>
-                        </td>
-                        <td class="active">
-                            <p>Reserver</p>
-                        </td>
-                        <td class="edit"><a href="">Edit</a></td>
-                    </tr>
-                    <tr>
-                        <td class="people">
-                            <img src="img/profile/profile.png" alt="">
-                            <div class="people-name">
-                                <h5>Alexander Poaty</h5>
-                                <p>(+242) 066065050</p>
-                            </div>
-                        </td>
-                        <td class="people-destination">
-                            <h5>Brazzaville</h5>
-                        </td>
-                        <td class="people-date">
-                            <h5>26/11/2022</h5>
-                        </td>
-                        <td class="people-count">
-                            <h5>1</h5>
-                        </td>
-                        <td class="people-price">
-                            <h5>15000</h5>
-                        </td>
-                        <td class="active">
-                            <p>Reserver</p>
-                        </td>
-                        <td class="edit"><a href="">Edit</a></td>
-                    </tr>
-                    <tr>
-                        <td class="people">
-                            <img src="img/profile/profile.png" alt="">
-                            <div class="people-name">
-                                <h5>Alexander Poaty</h5>
-                                <p>(+242) 066065050</p>
-                            </div>
-                        </td>
-                        <td class="people-destination">
-                            <h5>Brazzaville</h5>
-                        </td>
-                        <td class="people-date">
-                            <h5>26/11/2022</h5>
-                        </td>
-                        <td class="people-count">
-                            <h5>1</h5>
-                        </td>
-                        <td class="people-price">
-                            <h5>15000</h5>
-                        </td>
-                        <td class="active">
-                            <p>Reserver</p>
-                        </td>
-                        <td class="edit"><a href="">Edit</a></td>
-                    </tr>
-                    <tr>
-                        <td class="people">
-                            <img src="img/profile/profile.png" alt="">
-                            <div class="people-name">
-                                <h5>Alexander Poaty</h5>
-                                <p>(+242) 066065050</p>
-                            </div>
-                        </td>
-                        <td class="people-destination">
-                            <h5>Brazzaville</h5>
-                        </td>
-                        <td class="people-date">
-                            <h5>26/11/2022</h5>
-                        </td>
-                        <td class="people-count">
-                            <h5>1</h5>
-                        </td>
-                        <td class="people-price">
-                            <h5>15000</h5>
-                        </td>
-                        <td class="active">
-                            <p>Reserver</p>
-                        </td>
-                        <td class="edit"><a href="">Edit</a></td>
-                    </tr>
-                    <tr>
-                        <td class="people">
-                            <img src="img/profile/profile.png" alt="">
-                            <div class="people-name">
-                                <h5>Alexander Poaty</h5>
-                                <p>(+242) 066065050</p>
-                            </div>
-                        </td>
-                        <td class="people-destination">
-                            <h5>Brazzaville</h5>
-                        </td>
-                        <td class="people-date">
-                            <h5>26/11/2022</h5>
-                        </td>
-                        <td class="people-count">
-                            <h5>1</h5>
-                        </td>
-                        <td class="people-price">
-                            <h5>15000</h5>
-                        </td>
-                        <td class="active">
-                            <p>Reserver</p>
-                        </td>
-                        <td class="edit"><a href="">Edit</a></td>
-                    </tr>
-                    <tr>
-                        <td class="people">
-                            <img src="img/profile/profile.png" alt="">
-                            <div class="people-name">
-                                <h5>Alexander Poaty</h5>
-                                <p>(+242) 066065050</p>
-                            </div>
-                        </td>
-                        <td class="people-destination">
-                            <h5>Brazzaville</h5>
-                        </td>
-                        <td class="people-date">
-                            <h5>26/11/2022</h5>
-                        </td>
-                        <td class="people-count">
-                            <h5>1</h5>
-                        </td>
-                        <td class="people-price">
-                            <h5>15000</h5>
-                        </td>
-                        <td class="active">
-                            <p>Reserver</p>
-                        </td>
-                        <td class="edit"><a href="">Edit</a></td>
-                    </tr>
-                    <tr>
-                        <td class="people">
-                            <img src="img/profile/profile.png" alt="">
-                            <div class="people-name">
-                                <h5>Alexander Poaty</h5>
-                                <p>(+242) 066065050</p>
-                            </div>
-                        </td>
-                        <td class="people-destination">
-                            <h5>Brazzaville</h5>
-                        </td>
-                        <td class="people-date">
-                            <h5>26/11/2022</h5>
-                        </td>
-                        <td class="people-count">
-                            <h5>1</h5>
-                        </td>
-                        <td class="people-price">
-                            <h5>15000</h5>
-                        </td>
-                        <td class="active">
-                            <p>Reserver</p>
-                        </td>
-                        <td class="edit"><a href="">Edit</a></td>
-                    </tr>
-                    <tr>
-                        <td class="people">
-                            <img src="img/profile/profile.png" alt="">
-                            <div class="people-name">
-                                <h5>Alexander Poaty</h5>
-                                <p>(+242) 066065050</p>
-                            </div>
-                        </td>
-                        <td class="people-destination">
-                            <h5>Brazzaville</h5>
-                        </td>
-                        <td class="people-date">
-                            <h5>26/11/2022</h5>
-                        </td>
-                        <td class="people-count">
-                            <h5>1</h5>
-                        </td>
-                        <td class="people-price">
-                            <h5>15000</h5>
-                        </td>
-                        <td class="active">
-                            <p>Reserver</p>
-                        </td>
-                        <td class="edit"><a href="">Edit</a></td>
+                        <td class="edit"><a href="" data-bs-toggle="modal" data-bs-target="#editPrice">Edit</a></td>
                     </tr>
                 </tbody>
             </table>
         </div>
     </section>
+
+    <!-- Modal add destination -->
+    <div class="modal fade" id="addPrice" tabindex="-1" aria-labelledby="addPriceLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addPriceLabel">Ajouter tarif</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-edit">
+                        <form action="">
+                            <div class="form-group">
+                                <label for="city_start">Ville départ</label>
+                                <select name="city_start" id="city_start">
+                                    <option value="0">Sélectionner une ville</option>
+                                    <option value="1">Pointe-Noire</option>
+                                    <option value="2">Brazzaville</option>
+                                    <option value="3">Dolisie</option>
+                                    <option value="4">Nkayi</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="city_end">Ville destination</label>
+                                <select name="city_end" id="city_end">
+                                    <option value="0">Sélectionner une ville</option>
+                                    <option value="1">Pointe-Noire</option>
+                                    <option value="2">Brazzaville</option>
+                                    <option value="3">Dolisie</option>
+                                    <option value="4">Nkayi</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="price">Prix</label>
+                                <input type="text" name="price" id="price">
+                            </div>
+                            <div class="form-submit solo">
+                                <button class="solo" type="submit">Ajouter</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Modal add destination -->
+
+    <!-- Modal edit destination -->
+    <div class="modal fade" id="editPrice" tabindex="-1" aria-labelledby="editPriceLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editPriceLabel">Edition tarif</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-edit">
+                        <form action="">
+                            <div class="form-group">
+                                <label for="city_start">Ville départ</label>
+                                <select name="city_start" id="city_start">
+                                    <option value="0">Sélectionner une ville</option>
+                                    <option value="1">Pointe-Noire</option>
+                                    <option value="2">Brazzaville</option>
+                                    <option value="3">Dolisie</option>
+                                    <option value="4">Nkayi</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="city_end">Ville destination</label>
+                                <select name="city_end" id="city_end">
+                                    <option value="0">Sélectionner une ville</option>
+                                    <option value="1">Pointe-Noire</option>
+                                    <option value="2">Brazzaville</option>
+                                    <option value="3">Dolisie</option>
+                                    <option value="4">Nkayi</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="price">Prix</label>
+                                <input type="text" name="price" id="price">
+                            </div>
+                            <div class="form-submit">
+                                <a href="#">Supprimer</a href="#">
+                                <button type="submit">Mettre à jour</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Modal edit destination -->
 
     <script src="./vendors/jquery/jquery-3.6.1.min.js"></script>
     <script src="./vendors/bootstrap/js/bootstrap.bundle.min.js"></script>

@@ -28,12 +28,12 @@ $(document).ready(function(){
     /*------------------
         DataTable
     --------------------*/
+    
+    $('#user-dashboard').DataTable();
+    
     $('#user-historique').DataTable({
         "bFilter": false,
     });
-
-    $('#user-dashboard').DataTable();
-
 
     $('#sidebarCollapse').on('click', function () {
         $('#sidebar').toggleClass('active');

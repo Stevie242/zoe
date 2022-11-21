@@ -22,10 +22,10 @@
 
         <div class="items">
             <li><i class="fa-solid fa-chart-pie"></i><a href="admin-index.html">Tableau de bord</a></li>
-            <li><i class="fas fa-users-line"></i><a href="admin-reservation.html">Reservation clients</a></li>
-            <li><i class="fa-solid fa-location-pin"></i><a href="admin-ges-destination.html">Gestion des destination</a></li>
+            <li class="active"><i class="fa-solid fa-location-pin"></i><a href="admin-ges-destination.html">Gestion des
+                    destination</a></li>
             <li><i class="fa-solid fa-money-bill"></i><a href="admin-ges-tarifs.html">Gestion des tarifs</a></li>
-            <li class="active"><i class="fa-solid fa-users"></i></i><a href="admin-ges-users.html">Gestion des utilisateurs</a></li>
+            <li><i class="fa-solid fa-users"></i></i><a href="admin-ges-users.html">Gestion des utilisateurs</a></li>
             <li><i class="fa-solid fa-user-gear"></i></i><a href="admin-mon-compte.html">Mon compte</a></li>
             <li id="logout"><i class="fa-solid fa-right-from-bracket"></i><a href="index.html">Déconnexion</a></li>
         </div>
@@ -50,43 +50,8 @@
             Gestion des utilisateurs
         </h3>
 
-        <div class="cards row">
-            <div class="col-sm-12 col-md-6 col-lg-3">
-                <div class="carte">
-                    <i class="fas fa-users"></i>
-                    <div>
-                        <h3>10</h3>
-                        <span>users</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-3">
-                <div class="carte">
-                    <i class="fas fa-users"></i>
-                    <div>
-                        <h3>10</h3>
-                        <span>users</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-3">
-                <div class="carte">
-                    <i class="fas fa-users"></i>
-                    <div>
-                        <h3>10</h3>
-                        <span>users</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-3">
-                <div class="carte">
-                    <i class="fas fa-users"></i>
-                    <div>
-                        <h3>10</h3>
-                        <span>users</span>
-                    </div>
-                </div>
-            </div>
+        <div class="btn-add-dest">
+            <button data-bs-toggle="modal" data-bs-target="#addUser">Ajouter un utilisateurs</button>
         </div>
 
         <div class="board">
@@ -94,10 +59,7 @@
                 <thead>
                     <tr>
                         <td>Nom</td>
-                        <td>Destination</td>
-                        <td>Date depart</td>
-                        <td>Nombre de passager</td>
-                        <td>Tarifs</td>
+                        <td>Rôle</td>
                         <td>Status</td>
                         <td></td>
                     </tr>
@@ -112,21 +74,12 @@
                             </div>
                         </td>
                         <td class="people-destination">
-                            <h5>Brazzaville</h5>
-                        </td>
-                        <td class="people-date">
-                            <h5>26/11/2022</h5>
-                        </td>
-                        <td class="people-count">
-                            <h5>1</h5>
-                        </td>
-                        <td class="people-price">
-                            <h5>15000</h5>
+                            <h5>Admin</h5>
                         </td>
                         <td class="active">
-                            <p>Reserver</p>
+                            <p>Actif</p>
                         </td>
-                        <td class="edit"><a href="">Edit</a></td>
+                        <td class="edit"><a href="" data-bs-toggle="modal" data-bs-target="#changeState">Edit</a></td>
                     </tr>
                     <tr>
                         <td class="people">
@@ -137,21 +90,12 @@
                             </div>
                         </td>
                         <td class="people-destination">
-                            <h5>Brazzaville</h5>
-                        </td>
-                        <td class="people-date">
-                            <h5>26/11/2022</h5>
-                        </td>
-                        <td class="people-count">
-                            <h5>1</h5>
-                        </td>
-                        <td class="people-price">
-                            <h5>15000</h5>
+                            <h5>Admin</h5>
                         </td>
                         <td class="active">
-                            <p>Reserver</p>
+                            <p>Actif</p>
                         </td>
-                        <td class="edit"><a href="">Edit</a></td>
+                        <td class="edit"><a href="" data-bs-toggle="modal" data-bs-target="#changeState">Edit</a></td>
                     </tr>
                     <tr>
                         <td class="people">
@@ -162,21 +106,12 @@
                             </div>
                         </td>
                         <td class="people-destination">
-                            <h5>Brazzaville</h5>
+                            <h5>Admin</h5>
                         </td>
-                        <td class="people-date">
-                            <h5>26/11/2022</h5>
+                        <td class="wait">
+                            <p>Bloqué</p>
                         </td>
-                        <td class="people-count">
-                            <h5>1</h5>
-                        </td>
-                        <td class="people-price">
-                            <h5>15000</h5>
-                        </td>
-                        <td class="active">
-                            <p>Reserver</p>
-                        </td>
-                        <td class="edit"><a href="">Edit</a></td>
+                        <td class="edit"><a href="" data-bs-toggle="modal" data-bs-target="#changeState">Edit</a></td>
                     </tr>
                     <tr>
                         <td class="people">
@@ -187,126 +122,69 @@
                             </div>
                         </td>
                         <td class="people-destination">
-                            <h5>Brazzaville</h5>
-                        </td>
-                        <td class="people-date">
-                            <h5>26/11/2022</h5>
-                        </td>
-                        <td class="people-count">
-                            <h5>1</h5>
-                        </td>
-                        <td class="people-price">
-                            <h5>15000</h5>
+                            <h5>Admin</h5>
                         </td>
                         <td class="active">
-                            <p>Reserver</p>
+                            <p>Actif</p>
                         </td>
-                        <td class="edit"><a href="">Edit</a></td>
-                    </tr>
-                    <tr>
-                        <td class="people">
-                            <img src="img/profile/profile.png" alt="">
-                            <div class="people-name">
-                                <h5>Alexander Poaty</h5>
-                                <p>(+242) 066065050</p>
-                            </div>
-                        </td>
-                        <td class="people-destination">
-                            <h5>Brazzaville</h5>
-                        </td>
-                        <td class="people-date">
-                            <h5>26/11/2022</h5>
-                        </td>
-                        <td class="people-count">
-                            <h5>1</h5>
-                        </td>
-                        <td class="people-price">
-                            <h5>15000</h5>
-                        </td>
-                        <td class="active">
-                            <p>Reserver</p>
-                        </td>
-                        <td class="edit"><a href="">Edit</a></td>
-                    </tr>
-                    <tr>
-                        <td class="people">
-                            <img src="img/profile/profile.png" alt="">
-                            <div class="people-name">
-                                <h5>Alexander Poaty</h5>
-                                <p>(+242) 066065050</p>
-                            </div>
-                        </td>
-                        <td class="people-destination">
-                            <h5>Brazzaville</h5>
-                        </td>
-                        <td class="people-date">
-                            <h5>26/11/2022</h5>
-                        </td>
-                        <td class="people-count">
-                            <h5>1</h5>
-                        </td>
-                        <td class="people-price">
-                            <h5>15000</h5>
-                        </td>
-                        <td class="active">
-                            <p>Reserver</p>
-                        </td>
-                        <td class="edit"><a href="">Edit</a></td>
-                    </tr>
-                    <tr>
-                        <td class="people">
-                            <img src="img/profile/profile.png" alt="">
-                            <div class="people-name">
-                                <h5>Alexander Poaty</h5>
-                                <p>(+242) 066065050</p>
-                            </div>
-                        </td>
-                        <td class="people-destination">
-                            <h5>Brazzaville</h5>
-                        </td>
-                        <td class="people-date">
-                            <h5>26/11/2022</h5>
-                        </td>
-                        <td class="people-count">
-                            <h5>1</h5>
-                        </td>
-                        <td class="people-price">
-                            <h5>15000</h5>
-                        </td>
-                        <td class="active">
-                            <p>Reserver</p>
-                        </td>
-                        <td class="edit"><a href="">Edit</a></td>
-                    </tr>
-                    <tr>
-                        <td class="people">
-                            <img src="img/profile/profile.png" alt="">
-                            <div class="people-name">
-                                <h5>Alexander Poaty</h5>
-                                <p>(+242) 066065050</p>
-                            </div>
-                        </td>
-                        <td class="people-destination">
-                            <h5>Brazzaville</h5>
-                        </td>
-                        <td class="people-date">
-                            <h5>26/11/2022</h5>
-                        </td>
-                        <td class="people-count">
-                            <h5>1</h5>
-                        </td>
-                        <td class="people-price">
-                            <h5>15000</h5>
-                        </td>
-                        <td class="active">
-                            <p>Reserver</p>
-                        </td>
-                        <td class="edit"><a href="">Edit</a></td>
+                        <td class="edit"><a href="" data-bs-toggle="modal" data-bs-target="#changeState">Edit</a></td>
                     </tr>
                 </tbody>
             </table>
         </div>
     </section>
+
+    <!-- Modal add user -->
+    <div class="modal fade" id="addUser" tabindex="-1" aria-labelledby="addUserLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addUserLabel">Ajouter utilisateurs</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-edit">
+                        <form action="">
+                            <div class="user_pic">
+                                <img src="img/" alt="">
+                                <label for="add_pic"><i class="fas fa-camera-alt"></i></label>
+                                <input type="file" name="picture" id="add_pic">
+                            </div>
+                            <div class="form-group">
+                                <label for="full_name">Nom et prénom</label>
+                                <input type="text" name="full_name" id="full_name">
+                            </div>
+                            <div class="form-group">
+                                <label for="birthday">Date de naissance</label>
+                                <input type="date" name="birthday" id="birthday">
+                            </div>
+                            <div class="form-group">
+                                <label for="city">Ville</label>
+                                <input type="text" name="city" id="city">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Téléphone</label>
+                                <input type="tel" name="phone" id="phone">
+                            </div>
+                            <div class="form-group">
+                                <label for="city_start">Rôle</label>
+                                <select name="city_start" id="city_start">
+                                    <option value="0">Sélectionner un rôle</option>
+                                    <option value="1">Admin</option>
+                                    <option value="2">User</option>
+                                    <option value="3">Client</option>
+                                </select>
+                            </div>
+                            <div class="form-submit solo">
+                                <button type="submit" class="solo">Ajouter</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Modal add user -->
 
     <script src="./vendors/jquery/jquery-3.6.1.min.js"></script>
     <script src="./vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
