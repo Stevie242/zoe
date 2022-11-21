@@ -1188,6 +1188,7 @@ tbody tr td {
     border-bottom: 3px solid var(--orange);
     background: rgb(255, 244, 244);
     outline: none;
+    width: 100%;
 }
 
 .com-zephir .form-group textarea {
