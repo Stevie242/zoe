@@ -239,6 +239,12 @@ body {
     .nav-mobile {
         display: none;
     }
+    .tarif-content .location h4{
+        font-size: 18px;
+    }
+    .tarif-content .price-dest h3{
+        font-size: 20px;
+    }
 }
 
 @media (max-width:870px) {
@@ -267,6 +273,14 @@ body {
         display: block;
         transition: .3s ease;
         transform: translateX(0%);
+    }
+
+    .tarif-content .location h4{
+        font-size: 15px;
+    }
+
+    .tarif-content .price-dest h3{
+        font-size: 15px;
     }
 
     .hero .content h1 {
@@ -1304,13 +1318,14 @@ tbody tr td {
 }
 
 .nos-tarifs .tarifs .box-tarif .tarif-content .price-dest h3{
-    font-size: 20px;
+    /* font-size: 20px; */
     font-weight: 600;
     color: #058849;
+    margin-top: 5px;
 }
 
 .nos-tarifs .tarifs .box-tarif .tarif-content .location h4 {
-    font-size: 18px;
+    /* font-size: 18px; */
     font-weight: 600;
     margin-bottom: 8px;
     margin-top: 5px;
