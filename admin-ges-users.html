@@ -146,8 +146,8 @@
                     <div class="form-edit">
                         <form action="">
                             <div class="user_pic">
-                                <img src="img/" alt="">
-                                <label for="add_pic"><i class="fas fa-camera-alt"></i></label>
+                                <img src="img/profil-default.png" alt="" id="image_profile">
+                                <label for="add_pic" id="btn-add-pic"><i class="fas fa-camera-alt"></i></label>
                                 <input type="file" name="picture" id="add_pic">
                             </div>
                             <div class="form-group">
@@ -189,22 +189,22 @@
     <!-- Change statut users -->
     <div class="modal fade" id="changeState" tabindex="-1" aria-labelledby="changeStateLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <div class="content-modal text-center">
-                <h5>Bloquer l'utilisateur</h5>
-                <div class="button-action">
-                    <a href="">Oui</a>
-                    <a href="">Non</a>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-              </div>
+                <div class="modal-body">
+                    <div class="content-modal text-center">
+                        <h5>Bloquer l'utilisateur</h5>
+                        <div class="button-action">
+                            <a href="">Oui</a>
+                            <a href="">Non</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>      
+    </div>
     <!-- >Change statut users -->
 
     <script src="./vendors/jquery/jquery-3.6.1.min.js"></script>

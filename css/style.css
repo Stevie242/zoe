@@ -827,10 +827,14 @@ footer {
     border-radius: 50%;
     color: rgb(255, 254, 254);
     opacity: .6;
+    cursor: pointer;
     /* bottom: -15px;
     right: 150px; */
 }
 
+.auth-a .content .form-auth .user_pic label.file{
+    opacity: .3;
+}
 
 .auth-a .content .form-auth .user_pic input {
     display: none;
