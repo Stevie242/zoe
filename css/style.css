@@ -492,9 +492,9 @@ body {
     height: 370px;
     width: 335px;
     padding: 20px 35px;
-    background: transparent;
+    background: rgba(247, 89, 16, 0.342);
     border-radius: 0px;
-    border: 1px solid #f85e05b7;
+    /* border: 1px solid #f85e05b7; */
     margin: 15px;
     position: relative;
     overflow: hidden;
