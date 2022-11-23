@@ -7,14 +7,14 @@
 :root{
     --orange-zoe:rgb(241, 96, 38);
     --orange-zoe-reverse:rgb(163, 60, 19);
-    --green-zoe: rgb(126, 245, 58);
+    --green-zoe: #06552ff1;
     --green-zoe-reverse: rgb(91, 211, 22);
     --text-color: rgb(134,141,151);
     --text-i-color: #f3f4f6;
     --text-h-color: #444a53;
     --text-span-color: #828997;
     --bg-list-color: #253047;
-    --bg-card-color: chartreuse;
+    --bg-card-color: #06552ff1;
     --border-color: #594ef7;
     --table-tr-color: #eef0f3;
     --thead-bg-color: #f9fafB;
@@ -458,7 +458,7 @@ tbody tr td{
 
 .my-profile .info-pers .user-profile .prof .prof-form h5{
     color: var(--orange-zoe);
-    font: 16px;
+    font-size: 16px;
     display: inline-block;
 }
 
@@ -480,10 +480,10 @@ tbody tr td{
     width: 30%;
     padding: 10px 20px;
     border: none;
-    background-color: rgba(111, 253, 106, 0.616);
+    background-color: var(--bg-card-color);
     border-bottom-left-radius: 10px;
     border-top-right-radius: 10px;
-    color: rgb(4, 73, 2);
+    color: #fff;
 }
 
 /* Modal add and edit */
@@ -514,7 +514,7 @@ tbody tr td{
 
 .form-edit .form-group select,
 .form-edit .form-group input {
-    border: 2px solid rgb(111, 253, 106);
+    border: 2px solid var(--green-zoe);
     border-radius: 10px;
     height: 45px;
     font-size: 17px;
@@ -566,20 +566,20 @@ tbody tr td{
     /* width: 50%; */
     padding: 10px 20px;
     border: none;
-    background-color: rgba(111, 253, 106, 0.616);
+    background-color: var(--bg-card-color);
     border-bottom-left-radius: 10px;
     border-top-right-radius: 10px;
-    color: rgb(4, 73, 2);
+    color: #fff;
 }
 
 .form-edit .form-submit button.solo {
     width: 50%;
     padding: 10px 20px;
     border: none;
-    background-color: rgba(111, 253, 106, 0.616);
+    background-color: var(--bg-card-color);
     border-bottom-left-radius: 10px;
     border-top-right-radius: 10px;
-    color: rgb(4, 73, 2);
+    color: #fff;
 }
 
 .form-edit .signup-link {
@@ -640,8 +640,8 @@ tbody tr td{
     width: 30%;
     padding: 10px 20px;
     border: none;
-    background-color: rgba(111, 253, 106, 0.616);
+    background-color: var(--bg-card-color);
     border-bottom-left-radius: 10px;
     border-top-right-radius: 10px;
-    color: rgb(4, 73, 2);
+    color: #fff;
 }
