@@ -72,7 +72,7 @@ $(document).ready(function(){
 
 })
 
-const boxes = document.querySelectorAll(['.col-content','.box-tarif','.about-text'])
+const boxes = document.querySelectorAll(['.col-content','.box-tarif'])
 window.addEventListener('scroll', checkBoxes)
 checkBoxes()
 function checkBoxes (){
@@ -87,4 +87,18 @@ function checkBoxes (){
     })
 }
 
+
+const boxe_text = document.querySelectorAll(['.about-text'])
+window.addEventListener('scroll', textBoxes)
+textBoxes()
+function textBoxes (){
+    const triggerBottom = window.innerHeight /5 * 4
+    boxe_text.forEach(box => {
+        const boxTop = box.getBoundingClientRect().top
+        if(boxTop < triggerBottom){
+
+            box.classList.add('show')
+        }
+    })
+}
 

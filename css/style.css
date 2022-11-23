@@ -6,6 +6,7 @@
     --green-reverse: rgb(25, 168, 12);
     --table-tr-color: #eef0f3;
     --thead-bg-color: #f9fafB;
+    --green-text-2: #06552ff1;
 }
 
 @font-face {
@@ -375,13 +376,13 @@ body {
     width: 550px;
 } */
 .about .main .about-text {
-    opacity: 0;
+    transform: translateX(400%);
+    transition: .5s ease;
 }
 
 .about .main .about-text.show {
     opacity: 0;
     position: relative;
-    transform: translateX(400%);
     transition: .5s ease;
     animation: appaer 2s forwards;
 }
@@ -399,7 +400,7 @@ body {
 }
 
 .about .main .about-text h2 {
-    color: var(--green-texte);
+    color: var(--green-text-2);
     font-size: 50px;
     text-transform: capitalize;
     margin-bottom: 20px;
@@ -417,7 +418,7 @@ body {
 }
 
 .about .main .about-text h5 span:last-child {
-    color: var(--green-reverse);
+    color: var(--green-text-2);
 }
 
 .about .main .about-text p {
@@ -553,7 +554,7 @@ section.destination {
 }
 
 .destination .title h2 {
-    color: var(--green-texte);
+    color: var(--green-text-2);
     font-size: 40px;
     /* width: 1130px; */
     margin: 15px auto;
@@ -569,7 +570,7 @@ section.destination {
     bottom: -10px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: var(--green-texte);
+    background-color: var(--green-text-2);
     transition: .3s ease;
     animation: lice-loop 6s infinite;
 }
@@ -638,7 +639,7 @@ footer {
 }
 
 .footer-title {
-    color: var(--green-texte);
+    color: var(--green-text-2);
     margin-top: 10px;
     margin-bottom: 10Px;
     font-size: 20px;
