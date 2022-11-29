@@ -980,6 +980,10 @@ footer {
     font-size: 16px;
 }
 
+.address .min-desc p {
+    margin-bottom: 0;
+}
+
 /* User dashboard */
 
 .user-dash {
@@ -1243,15 +1247,14 @@ tbody tr td {
 
 .com-zephir .section-total{
     display: flex;
-    justify-content: end;
+    justify-content: center;
 }
 
 .com-zephir .section-total div{
-    max-width: 400px;
-    width: 100%;
+    /* max-width: 400px;
+    width: 100%; */
     padding: 10px 15px;
     background-color: rgb(247, 240, 240);
-    margin-right: 30px;
 }
 
 .com-zephir .section-total div .amount h5{
