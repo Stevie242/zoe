@@ -102,3 +102,10 @@ function textBoxes (){
     })
 }
 
+
+function sectionTotal(){
+    var passager = document.getElementById("passager").value;
+    var price = document.getElementById("price").value;
+    document.getElementById("nbr_passager").innerHTML = passager;
+    document.getElementById("total_reservation").innerHTML = passager * price;
+}

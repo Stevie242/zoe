@@ -1151,7 +1151,7 @@ tbody tr td {
 }
 
 /* Réservation */
-.com-zephir h5 {
+.com-zephir > h5 {
     text-align: center;
     color: var(--orange);
     font-size: 26px;
@@ -1159,7 +1159,7 @@ tbody tr td {
     position: relative;
 }
 
-.com-zephir h5::before {
+.com-zephir > h5::before {
     content: '';
     position: absolute;
     height: 3px;
@@ -1238,6 +1238,53 @@ tbody tr td {
 }
 
 .com-zephir .form-submit button:hover {
+    background-color: var(--orange-reverse);
+}
+
+.com-zephir .section-total{
+    display: flex;
+    justify-content: end;
+}
+
+.com-zephir .section-total div{
+    max-width: 400px;
+    width: 100%;
+    padding: 10px 15px;
+    background-color: rgb(247, 240, 240);
+    margin-right: 30px;
+}
+
+.com-zephir .section-total div .amount h5{
+    margin-bottom: 20px;
+}
+
+.com-zephir .section-total div .amount h5:last-child{
+    margin-bottom: 0px;
+}
+
+.com-zephir .section-total div .amount span{
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+.com-zephir .section-total div .submit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0;
+}
+.com-zephir .section-total div .submit button{
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--orange);
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    width: 250px;
+}
+
+.com-zephir .section-total div .submit button:hover{
     background-color: var(--orange-reverse);
 }
 

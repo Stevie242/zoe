@@ -66,7 +66,7 @@
         </div>
 
         <!-- reservation -->
-        <div class="container com-zephir">
+        <!-- <div class="container com-zephir">
             <div>
                 <h5>Réserver dès maintenant</h5>
                 <form action="" class="row">
@@ -147,6 +147,93 @@
                     </div>
                 </form>
             </div>
+        </div> -->
+        <div class="reserved container com-zephir">
+            <h5>Réserver dès maintenant</h5>
+            <form action="">
+                <div class="row">
+                    <div class="col-md-6 col-sm-12">
+                        <div class="form-group">
+                            <label for="">Nom complet</label>
+                            <input type="text" name="" id="" placeholder="Ex : SITA Paul">
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <div class="form-group">
+                            <label for="">Numéro</label>
+                            <input type="text" name="" id="" placeholder="Ex : 066068080">
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <div class="form-group">
+                            <label for="">Itinéraire</label>
+                            <select name="" id="">
+                                <option value="">Pointe-Noire - Dolisie</option>
+                                <option value="">Pointe-Noire - Nkayi</option>
+                                <option value="">Pointe-Noire - Brazzaville</option>
+                                <option value="">Brazzaville - Dolisie</option>
+                                <option value="">Brazzaville - Nkayi</option>
+                                <option value="">Brazzaville - Pointe-Noire</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <div class="form-group">
+                            <label for="">Date départ</label>
+                            <input type="date" name="" id="">
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <div class="form-group">
+                            <label for="">Gare départ</label>
+                            <select name="" id="">
+                                <option value="">OCH</option>
+                                <option value="">Fond Tie-Tie</option>
+                                <option value="">Ngoyo</option>
+                                <option value="">Mfilou</option>
+                                <option value="">Plateau</option>
+                                <option value="">Ouenze</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <div class="form-group">
+                            <label for="">Gare d'arrivée</label>
+                            <select name="" id="">
+                                <option value="">OCH</option>
+                                <option value="">Fond Tie-Tie</option>
+                                <option value="">Ngoyo</option>
+                                <option value="">Mfilou</option>
+                                <option value="">Plateau</option>
+                                <option value="">Ouenze</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <div class="form-group">
+                            <label for="price">Prix</label>
+                            <input type="text" name="price" id="price" disabled onchange="sectionTotal()" value="15000">
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <div class="form-group">
+                            <label for="passager">Nombre de passager</label>
+                            <input type="number" name="passager" id="passager" min="1" onchange="sectionTotal()">
+                        </div>
+                    </div>
+                </div>
+                <div class="section-total">
+                    <div>
+                        <div class="amount">
+                            <h5>Nombre de passager : <span id="nbr_passager">0</span></h5>
+                            <h5>Total : <span id="total_reservation">0</span> Xaf</h5>
+                        </div>
+                        <div class="submit">
+                            <button>Soumettre</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
         </div>
         <!-- /reservation -->
 
@@ -212,6 +299,14 @@
     <script src="./vendors/jquery/jquery-3.6.1.min.js"></script>
     <script src="./vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="./js/main.js"></script>
+    <script>
+        function sectionTotal(){
+            var passager = document.getElementById("passager").value;
+            var price = document.getElementById("price").value;
+            document.getElementById("nbr_passager").innerHTML = passager;
+            document.getElementById("total_reservation").innerHTML = passager * price;
+        }
+    </script>
 </body>
 
 </html>
